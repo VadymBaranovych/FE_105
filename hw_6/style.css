@@ -1,0 +1,80 @@
+body {
+    font-family: Tahoma;
+    background:#e6e4e2;
+    margin: 0;
+
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 50px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    border-bottom: 2px solid;
+}
+form {
+    margin: 0 auto;
+    width: 450px;
+    height: 500px;
+}
+.name {
+    padding-top: 15px;
+}
+.form {
+    margin: 1px;
+    padding: 1px;
+}
+.items {
+    margin-top: 4px;
+    height: 25px;
+    width: 220px;
+}
+label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.items2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gender {
+    display: inline;
+    margin-right: 32px;
+}
+.age {
+    display: inline;
+    margin-right: 192px;
+}
+.item__ {
+    height: 23px;
+    width: 60px;
+}
+.course {
+    display: inline;
+    margin-right: 179px;
+}
+.choice {
+    height: 30px;
+    width: 150px;
+}
+.address {
+    display: inline;
+    margin-right: 111px;
+}
+.text {
+    font-size: 13.5px;
+}
+.item_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 10px;
+}
