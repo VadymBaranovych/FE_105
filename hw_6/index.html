@@ -7,50 +7,44 @@
     <link href="./style.css" rel="stylesheet">
 </head>
 <body>
-    <form action="#" method="get">
+    <form action="" method="GET">
         <h1 title="registration form">Реєстрація</h1>
         <div class="form">
-            <label for="" class="name">Повне ім'я
+            <label class="name">Повне ім'я
                 <input type="text" class="items">
             </label>
         </div>
-        <br>
         <div class="form">
             <label for="">Email
                 <input type="email"class="items"> 
             </label>
         </div>
-        <br>
         <div class="form">
             <label for="">Пароль
                 <input type="password"class="items">
             </label>
         </div>
-        <br>
         <div class="form">
             <label for="">Пароль ще раз
                 <input type="password" class="items">
             </label>
         </div>
-        <br>
-        <div class="items2">
+        <div class="gender">
             <div class="item">Стать</div>
             <div class="item">
                 <input type="radio" name="gender" id="male">
-                <label for="male" class="gender">чоловіча</label>
+                <label for="male" class="gender_">чоловіча</label>
                 <input type="radio" name="gender" id="female">
-                <label for="female" class="gender">жіноча</label>
+                <label for="female" class="gender_">жіноча</label>
             </div>
         </div>
-        <br>
         <div class="form">
             <label for="" class="age">Вік</label>
             <input id="age" type="number" class="item__">
         </div>
-        <br>
         <div class="form">
             <label for="" class="course">Курс</label>
-            <select name="course" id="" class="choice">
+            <select name="course" class="choice">
                 <option disabled selected>-=Виберіть курс=-</option>
                 <option value="Front-End">Front-End</option>
                 <option value="Back-End">Back-End</option>
@@ -58,16 +52,13 @@
                 <option value="QA Manual">QA Manual</option>
             </select>
         </div>
-        <br>
         <div class="form">
             <label for="" class="address">Повна адреса</label>
-            <textarea rows="5" cols="20" name="full address" placeholder="Країна, регіон, місто/селище, вулиця"></textarea>
+            <textarea rows="5" cols="20" name="full_address" placeholder="Країна, регіон, місто/селище, вулиця"></textarea>
         </div>
-        <br>
         <div class="form">
             <p class="text"><input type="checkbox" name="agree" value="yes">Я погоджуюсь з обробкою персональних даних</p>
         </div>
-        <br>
         <div class="item_2">
             <button type="reset">Очистити форму</button>
             <button type="submit">Зареєструватися</button>

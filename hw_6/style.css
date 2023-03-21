@@ -23,8 +23,8 @@ form {
     padding-top: 15px;
 }
 .form {
-    margin: 1px;
-    padding: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .items {
     margin-top: 4px;
@@ -36,12 +36,12 @@ label {
     justify-content: space-between;
     align-items: center;
 }
-.items2 {
+.gender {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.gender {
+.gender_ {
     display: inline;
     margin-right: 32px;
 }
