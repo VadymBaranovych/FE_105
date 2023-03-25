@@ -1,0 +1,154 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 720px;
+  height: 88px;
+  left: calc(50% - 269.5px + 0.5px);
+  top: 99px;
+  font-family: "Montserrat";
+  font-size: 36px;
+  text-align: center;
+  color: #2F281E;
+}
+
+.icon {
+  display: flex;
+  justify-content: left;
+  margin-top: 280px;
+}
+.icon .item2 {
+  margin-left: 260px;
+}
+.icon .item3 {
+  margin-left: 295px;
+}
+.icon .item4 {
+  margin-left: 260px;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat";
+  line-height: 27px;
+  gap: 140px;
+  color: #2F281E;
+}
+
+.btn_ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+.btn_ button {
+  padding: 13px 40px;
+  width: 180px;
+  height: 50px;
+  background: #FF9900;
+  border-radius: 4px;
+  border: none;
+  font-family: "Figtree";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: 209px;
+}
+footer .logo {
+  width: 210px;
+}
+footer .logo .img {
+  margin-top: 70px;
+  margin-right: 13px;
+}
+footer .logo .img_ {
+  margin-top: 70px;
+  margin-bottom: -3px;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+}
+.footer-menu nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 58px;
+  gap: 30px;
+}
+.footer-menu nav h2 {
+  font-family: "Figtree";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #2F281E;
+}
+.footer-menu nav ul {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Montserrat";
+  list-style-type: none;
+}
+.footer-menu nav ul li a {
+  text-decoration: none;
+  color: #544837;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 52px;
+}
+.subscribe h2 {
+  width: 320px;
+  font-family: "Figtree";
+  color: #2F281E;
+}
+.subscribe input {
+  max-width: 340px;
+  padding: 15px 118px 15px 10px;
+  border: 1px solid #BCD0E5;
+  border-radius: 4px;
+  font-family: "Montserrat";
+  font-size: 16px;
+  color: #BCD0E5;
+}
+.subscribe button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 40px;
+  width: 180px;
+  height: 50px;
+  background: #FF9900;
+  border-radius: 4px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  border: none;
+}
+.subscribe .btn {
+  font-family: "Figtree";
+  font-size: 16px;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=style.css.map */
