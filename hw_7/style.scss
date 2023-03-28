@@ -1,0 +1,118 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  header {
+    height: 80px;
+    .logo {
+      width: 210px;
+      float: left;
+      .img {
+        margin: 24.03px 10px 24.03px 0;
+      }
+      .img_ {
+        margin: 26.93px 0 24px 0;
+      }
+    }
+    nav {
+      width: 352px;
+      float: left;
+      margin: 32px 198px 32px 198px;
+      ul {
+        li {
+          margin-right: 10px;
+          display: inline-block;
+          &:last-child {
+            margin-right: 0;
+          }
+          .item:first-child {
+            color: #FF9900;
+          }
+          a {
+            font-family: 'Montserrat';
+            color: #2F281E;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .btn {
+      width: 242px;
+      float: left;
+      button {
+        width: 110px;
+        &.first {
+          float: left;
+          height: 46px;
+          border: 1px solid #BCD0E5;
+          border-radius: 4px;        
+          font-family: 'Montserrat';
+          font-weight: 600;
+          color: #2F281E;
+          margin: 17px 20px 17px 0;
+        }         
+        &.second {
+          float: right;
+          height: 46px;
+          background: #FF9900;
+          border-radius: 4px;    
+          font-family: 'Montserrat';
+          font-weight: 600;
+          line-height: 20px;
+          color: #FFFFFF;
+          margin: 17px 0px 17px 0;
+          border: none;
+        }
+      }
+    }
+  }
+  main {
+    height: 495px;
+    .item {
+        margin-top: 167px;
+    }
+    .text {
+        h1 {         
+          height: 110px;
+          width: 500px;
+          font-size: 44px;
+          font-family: 'Montserrat';
+          color: #2F281E;
+          font-weight: 700;
+          line-height: 54px;
+          margin-bottom: 30px;
+        }
+        h2 {      
+          font-family: 'Montserrat';
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 28px;
+          color: #544837;
+          width: 500px;
+          margin-bottom: 20px;
+        }
+    }
+    button {
+          width: 180px;
+          height: 50px;
+          background: #FF9900;
+          border-radius: 4px;
+          font-weight: 700;
+          color: #FFFFFF;
+          border: none;
+    }
+  }
+   #img {
+    position: relative;
+    left: 550px;
+    bottom: 470px;
+    z-index: 2;
+    margin-top: 70px;
+   } 
+   #img_ {
+    position: relative;
+    bottom: 470px;
+    right: 45px;
+    margin-top: 70px;
+   }
