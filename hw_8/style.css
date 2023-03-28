@@ -43,13 +43,13 @@
   color: #2F281E;
 }
 
-.btn_ {
+.btn-1 {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 70px;
 }
-.btn_ button {
+.btn-1 button {
   padding: 13px 40px;
   width: 180px;
   height: 50px;
@@ -146,9 +146,8 @@ footer .logo .img_ {
   flex-grow: 0;
   border: none;
 }
-.subscribe .btn {
+.subscribe .btn-2 {
   font-family: "Figtree";
   font-size: 16px;
   color: #FFFFFF;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
