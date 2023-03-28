@@ -19,22 +19,22 @@
   color: #2F281E;
 }
 
-.icon {
+.block .icon {
   display: flex;
   justify-content: left;
   margin-top: 280px;
 }
-.icon .item2 {
+.block .icon .item2 {
   margin-left: 260px;
 }
-.icon .item3 {
+.block .icon .item3 {
   margin-left: 295px;
 }
-.icon .item4 {
+.block .icon .item4 {
   margin-left: 260px;
 }
 
-.text {
+.block .text {
   display: flex;
   justify-content: space-between;
   font-family: "Montserrat";
