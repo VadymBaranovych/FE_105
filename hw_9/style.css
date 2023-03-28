@@ -1,0 +1,134 @@
+body {
+  background-color: yellowgreen;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: "Delius Unicase";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #000000;
+  margin-top: 120px;
+  margin-bottom: 80px;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 370px);
+  row-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+
+.item {
+  position: relative;
+  border-radius: 20px;
+}
+.item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+  border-radius: 20px;
+  transition: background-color 0.1s ease-in;
+}
+.item:hover::after {
+  background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%);
+}
+.item:hover .top {
+  opacity: 1;
+  left: 0;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+
+.top {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  opacity: 0;
+  left: -9999px;
+  transition: opacity 0.1s ease-in;
+}
+.top .btn {
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(224, 224, 224, 0.5);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.1s ease-in;
+  left: -9999px;
+}
+.top .btn:hover {
+  background-color: #E0E0E0;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  padding: 0 18px;
+  position: absolute;
+  bottom: 18px;
+  z-index: 2;
+  width: 100%;
+  line-height: 1.15;
+}
+.bottom span {
+  font-size: 20px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.bottom time {
+  font-size: 20px;
+  color: #E0E0E0;
+}
+
+.item:nth-child(1) {
+  grid-column: 1/2;
+}
+.item:nth-child(2) {
+  grid-column: 2/4;
+}
+.item:nth-child(3) {
+  grid-column: 1/3;
+}
+.item:nth-child(4) {
+  grid-column: 3/4;
+}
+.item:nth-child(5) {
+  grid-column: 1/2;
+}
+.item:nth-child(6) {
+  grid-column: 2/4;
+}/*# sourceMappingURL=style.css.map */
