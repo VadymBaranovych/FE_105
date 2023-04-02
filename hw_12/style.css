@@ -1,0 +1,174 @@
+body {
+  font-family: "PT Sans";
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.bg__img {
+  position: sticky;
+  top: 140px;
+  padding-left: 290px;
+  padding-top: 45px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 2;
+}
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .items {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+header .items .lang {
+  font-family: "Tourney";
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  color: #000000;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  text-transform: uppercase;
+}
+header .items .menu ul {
+  font-family: "Staatliches";
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+header .items .menu ul li {
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  mix-blend-mode: normal;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+header .items .menu ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.main-text {
+  padding-bottom: 90px;
+}
+.main-text .wrapper {
+  display: grid;
+  grid-template-columns: 385px 1fr;
+  grid-template-rows: 1fr;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  padding-top: 40px;
+  position: relative;
+}
+.main-text .sidebar .menu_2 {
+  position: sticky;
+  top: 140px;
+}
+.main-text .sidebar .menu_2 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  padding-top: 45px;
+  padding-left: 0px;
+  list-style: none;
+}
+.main-text .sidebar .menu_2 a {
+  display: block;
+  font-family: "Francois One";
+  font-size: 36px;
+  font-weight: 400;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 48px;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid #BDBDBD;
+}
+
+.content {
+  position: absolute;
+  left: 420px;
+  top: 45px;
+  width: 785px;
+}
+.content p, .content li {
+  font-size: 28px;
+  line-height: 48px;
+  margin: 0;
+  list-style-type: none;
+}
+.content p b, .content li b {
+  font-weight: 700;
+}
+.content p i, .content li i {
+  font-style: italic;
+}
+.content p u, .content li u {
+  font-family: "Hind";
+  font-weight: 400;
+}
+.content p code, .content li code {
+  background-color: #dadada;
+}
+
+.text-chapters, .text-chapters ul {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+h2.title {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 70px 0 40px;
+  position: relative;
+  margin: 0;
+}
+h2.title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100px;
+  height: 8px;
+  background-color: #000000;
+}
+h2.title span:first-child {
+  font-family: "Francois One";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+h2.title sup {
+  position: relative;
+  bottom: 10px;
+  font-family: "Farro";
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+}/*# sourceMappingURL=style.css.map */
