@@ -1,3 +1,5 @@
+@import "reset";
+
 body {
     font-family: 'PT Sans';
     font-size: 16px;
@@ -28,6 +30,7 @@ body {
         color: #000000;
         transform: matrix(1, 0, 0, 1, 0, 0);
         text-transform: uppercase;
+        width: 100px;
       }
       .menu {
         ul {
