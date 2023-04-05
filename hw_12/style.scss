@@ -10,8 +10,8 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: #000000;
-    background-image: url(../img/gear.png);
-    background-position: right 0 top 90px;
+    background-image: url(./img/gear.png);
+    background-position: right 0 top 210px;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
@@ -72,7 +72,7 @@ main {
       ul {
         display: flex;
         flex-direction: column;
-        gap: 70px;
+        gap: 80px;
         padding-top: 45px;
         padding-left: 0px;
         list-style: none;
@@ -92,6 +92,8 @@ main {
     }
   }
   .content {
+    padding-top: 90px;
+    padding-bottom: 90px;
     p, li {
         font-size: 28px;
         line-height: 48px;
