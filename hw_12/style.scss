@@ -1,0 +1,163 @@
+@import "reset";
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+body {
+    font-family: 'PT Sans';
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    background-image: url(./img/gear.png);
+    background-position: right 0 top 210px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  header {
+    height: 80px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100px 1fr 240px;
+    align-items: center;
+    background-color: #fff;
+    .lang {
+      font-family: 'Tourney';
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 18px;
+      letter-spacing: 0.04em;
+      color: #000000;
+      transform: matrix(1, 0, 0, 1, 0, 0);
+      text-transform: uppercase;
+    }
+    .menu {
+      ul {
+        font-family: 'Staatliches';
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+      li {
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: 0.03em;
+        mix-blend-mode: normal;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        a {
+        color: #000000;
+        text-decoration: none;
+        }
+      }
+    }
+  }
+}
+main {
+  padding-top: 80px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 385px 1fr;
+  .sidebar {
+    nav {
+      margin-top: 110px;
+      position: sticky;
+      top: 80px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        padding-top: 45px;
+        padding-left: 0px;
+        list-style: none;
+        a {
+          display: block;
+          font-family: 'Francois One';
+          font-size: 36px;
+          font-weight: 400;
+          color: #000000;
+          text-decoration: none;
+          text-transform: uppercase;
+          line-height: 48px;
+          letter-spacing: 0.03em;
+          border-bottom: 1px solid #BDBDBD;
+        }
+      }
+    }
+  }
+  .content {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    p, li {
+        font-size: 28px;
+        line-height: 48px;
+        margin: 0;
+        list-style-type: none;
+      b {
+        font-weight: 700;
+      }
+      i {
+        font-style: italic;
+      }
+      u {
+        font-family: 'Hind';
+        font-weight: 400;
+      }
+      code {
+        background-color: #dadada;
+      }
+    }
+    .text-chapters {
+      &, ul {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+    h2.title {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 70px 0 40px;
+      position: relative;
+      margin: 0;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100px;
+        height: 8px;
+        background-color: #000000;
+      }
+      span {
+        &:first-child {
+          font-family: 'Francois One';
+          font-size: 36px;
+          font-weight: 400;
+          line-height: 48px;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+        }
+      }
+      sup {
+        position: relative;
+        bottom: 10px;
+        font-family: 'Farro';
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+      }
+    }
+  }
+}
