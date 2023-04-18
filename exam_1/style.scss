@@ -13,7 +13,6 @@ body {
   font-family: "Montserrat";
   header {
     .header-wrapper {
-      width: 1170px;
       height: 100px;
       display: grid;
       grid-template-columns: 45px 915px 210px;
@@ -27,12 +26,10 @@ body {
           a {
             font-size: 16px;
             font-weight: 500;
-            text-transform: uppercase;
             line-height: 160%;
             color: #4b5d68;
             text-decoration: none;
             letter-spacing: 0.005em;
-            text-transform: capitalize;
             &:hover {
               color: #8a40ee;
             }
@@ -73,17 +70,15 @@ body {
     }
   }
   .first_screen {
-    width: 1170px;
     height: 489px;
     margin-top: 100px;
-    display: flex;
   }
   section.data_storage_section {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: 600px;
+    grid-template-rows: 177px 117px 80px;
+    grid-row-gap: 50px;
     .title {
-      width: 601px;
       height: 177px;
       font-family: "Work Sans";
       font-style: normal;
@@ -126,12 +121,11 @@ body {
     position: relative;
     img {
       position: absolute;
-      left: -200px;
+      left: 400px;
       bottom: 0;
     }
   }
   .who_we_are {
-    width: 1170px;
     height: 560px;
     margin-top: 100px;
     position: relative;
@@ -142,11 +136,10 @@ body {
     }
   }
   .who_we_are_section {
-    width: 500px;
     height: 340px;
     position: absolute;
     top: 110px;
-    right: 70px;
+    left: 600px;
     .title_2 {
       width: 500px;
       height: 100px;
@@ -172,7 +165,7 @@ body {
   .features {
     margin-bottom: 120px;
     .title_3 {
-     text-align: center;
+      text-align: center;
       font-family: "Work Sans";
       font-style: normal;
       font-weight: 700;
@@ -260,7 +253,6 @@ body {
     }
   }
   .testimonials {
-    width: 1170px;
     height: 580px;
     margin-bottom: 120px;
     .test_background {
@@ -351,7 +343,6 @@ body {
     }
   }
   footer {
-    width: 1170px;
     height: 570px;
     margin-bottom: 120px;
     .footer_heading {

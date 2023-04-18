@@ -352,7 +352,6 @@ body {
   font-family: "Montserrat";
 }
 body header .header-wrapper {
-  width: 1170px;
   height: 100px;
   display: grid;
   grid-template-columns: 45px 915px 210px;
@@ -367,12 +366,10 @@ body header .header-wrapper nav.menu ul {
 body header .header-wrapper nav.menu ul a {
   font-size: 16px;
   font-weight: 500;
-  text-transform: uppercase;
   line-height: 160%;
   color: #4b5d68;
   text-decoration: none;
   letter-spacing: 0.005em;
-  text-transform: capitalize;
 }
 body header .header-wrapper nav.menu ul a:hover {
   color: #8a40ee;
@@ -406,18 +403,16 @@ body header .header-wrapper svg {
   margin-bottom: -3px;
 }
 body .first_screen {
-  width: 1170px;
   height: 489px;
   margin-top: 100px;
-  display: flex;
 }
 body section.data_storage_section {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: 600px;
+  grid-template-rows: 177px 117px 80px;
+  grid-row-gap: 50px;
 }
 body section.data_storage_section .title {
-  width: 601px;
   height: 177px;
   font-family: "Work Sans";
   font-style: normal;
@@ -460,11 +455,10 @@ body .img_data_storage {
 }
 body .img_data_storage img {
   position: absolute;
-  left: -200px;
+  left: 400px;
   bottom: 0;
 }
 body .who_we_are {
-  width: 1170px;
   height: 560px;
   margin-top: 100px;
   position: relative;
@@ -475,11 +469,10 @@ body .who_we_are .img_who_we_are {
   left: 70px;
 }
 body .who_we_are_section {
-  width: 500px;
   height: 340px;
   position: absolute;
   top: 110px;
-  right: 70px;
+  left: 600px;
 }
 body .who_we_are_section .title_2 {
   width: 500px;
@@ -593,7 +586,6 @@ body .features .items .btn_feature {
   background: 0;
 }
 body .testimonials {
-  width: 1170px;
   height: 580px;
   margin-bottom: 120px;
 }
@@ -680,7 +672,6 @@ body .testimonials_wrapper .names {
   padding: 50px 30px 50px 30px;
 }
 body footer {
-  width: 1170px;
   height: 570px;
   margin-bottom: 120px;
 }
