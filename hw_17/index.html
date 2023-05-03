@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-		<meta charset="UTF-8">
-		<title>HW 17</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
-		<link rel="stylesheet" href="./iconsfont.css">
-		<link rel="stylesheet" href="./css/style.css">
+	<meta charset="UTF-8">
+	<title>HW 17</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./iconsfont.css">
+	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 	<div class="layout">
 		<header class="header">
 			<div class="wrapper header_wrapper">
-				<div class="items">
-					<div class="item item_first">
-						<button class="btn_icon iconfont-mail"></button>
-						<button class="btn_icon iconfont-bubble"></button>
-						<button class="btn_icon iconfont-calendar"></button>
-						<button class="btn_icon iconfont-star"></button>
+				<div class="header_items">
+					<div class="header_item header_item-first">
+						<button class="btn_icon icon-mail"></button>
+						<button class="btn_icon icon-bubble"></button>
+						<button class="btn_icon icon-calendar"></button>
+						<button class="btn_icon icon-star"></button>
 					</div>
-					<div class="item item_second">
-						<a href="#" class="lang">
+					<div class="header_item header_item-second">
+						<a href="#" class="header_lang">
 							<svg class="icon">
-								<use xlink:href="#lang-icon"></use>
+								<use xlink:href="./img/sprite.svg#lang-icon"></use>
 							</svg>
 							<span>English</span>
 						</a>
 						<div class="btn_settings">
-							<button class="btn_icon iconfont-change-theme"></button>
-              <button class="btn_icon iconfont-search"></button>
-              <button class="btn_icon iconfont-set"></button>
+							<button class="btn_icon icon-change-theme"></button>
+							<button class="btn_icon icon-search"></button>
+							<button class="btn_icon icon-set"></button>
 						</div>
 						<a href="#" class="avatar">
-							<img src="img/avatar.jpg" alt="Avatar">
+							<img src="img/avatar.jpg" alt="Avatar" />
 						</a>
 					</div>
 				</div>
@@ -42,16 +45,16 @@
 			<section class="sidebar_wrapper">
 				<div class="btn_logo">
 					<a href="#" class="logo">
-            <svg class="icon">
-              <use xlink:href="./img/sprite.svg#logo"></use>
-            </svg>
-            <span>LightBoard</span>
-          </a>
-					<div class="sidebar_btn iconfont-arrow"></div>
+						<svg class="icon">
+							<use xlink:href="./img/sprite.svg#logo"></use>
+						</svg>
+						<span>LightBoard</span>
+					</a>
+					<div class="sidebar_btn icon-arrow"></div>
 				</div>
 			</section>
 		</div>
-		<main><img src="img/content.jpg" alt="Content"></main>
+		<main><img src="img/content.jpg" alt="Content" /></main>
 	</div>
 	<script src="./js/script.js"></script>
 </body>
