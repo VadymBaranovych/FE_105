@@ -21,7 +21,7 @@ body {
     transition: 0.1s ease;
     max-width: 1440px;
     margin: 0 auto;
-    &:active {
+    &__active {
         grid-template-columns: 220px 1fr;
       }          
 }
@@ -34,8 +34,35 @@ body {
     transition: 0.1s ease;
     &:hover {
         color: $colorPurpleLight;
-    }
+    }   
 }
+.title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: #828282;
+        font-style: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+        &:before {
+            content: "";
+            display: block;
+            font-size: 16px;
+            width: 40px;
+            height: 4px;
+            background: linear-gradient(to right, #9E8CFC 8px, transparent 8px, transparent 12px, #9E8CFC 12px, #9E8CFC 27px, transparent 27px, transparent 32px, #9E8CFC 32px);
+            border-radius: 2px;
+        }
+    }
+    &__active {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      
+    }
 .header {
     grid-area: header;
     padding-top: 30px;
@@ -108,9 +135,12 @@ body {
 }
 .sidebar {
     grid-area: sidebar;
-    background: #FFFFFF;
+    display: grid;
+    grid-template-rows: 32px 46px 347px 163px 255px;
+    gap: 30px;
+    background: #fff;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-    padding: 30px 15px 30px;
+    padding: 30px 0;
     z-index: 0;
     .btn_logo {
         position: relative;
@@ -126,12 +156,12 @@ body {
                 width: 32px;
                 height: 32px;
             }
-            span {
+            .logo_title {
                 position: absolute;
                 display: block;
                 font-size: 18px;
                 font-weight: 500;
-                line-height: 1.22;
+                line-height: 22px;
                 overflow: hidden;
                 width: 0;
                 transition: 0.1s ease;
@@ -143,7 +173,7 @@ body {
             font-size: 20px;
             color: $colorPurpleDark;
             transition: 0.1s ease;
-            right: -25px;
+            right: -10px;
             top: 0;
             bottom: 0;
             margin: auto;
@@ -152,14 +182,17 @@ body {
             &:before {
                 display: inline-block;
                 transition: 0.2s ease;
+                background-color: #fff;
+                border-radius: 50%;
             }
         }
     }
     &__active {
+        padding: 30px 15px;
         .btn_logo {
             .logo {
                 justify-content: flex-start;
-                span {
+                .logo_title {
                     position: relative;
                     width: 104px;
                     opacity: 1;
@@ -170,6 +203,46 @@ body {
                 &:before {
                     transform: scale(-1);
                 }
+            }
+        }
+    }
+    .btn_icon-sidebar {
+        padding: 0;
+        background-color: unset;
+        border: unset;
+        font-size: 26px;
+        color: $colorGrayDark;
+        transition: 0.1s ease;
+        &:hover {
+            color: #fff;
+            background-color: $colorPurpleLight;
+        }
+    } 
+    .sidebar_icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 46px;
+        gap: 20px;
+        .subtitle {
+            position: absolute;
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            overflow: hidden;
+            width: 0;
+            transition: 0.1s ease;
+            opacity: 0;
+        }
+    }
+    &__active {
+        .sidebar_icon {
+            justify-content: flex-start;
+            .subtitle {
+                position: relative;
+                width: 89px;
+                opacity: 1;
             }
         }
     }
@@ -184,4 +257,4 @@ main {
       height: 676px;
       z-index: 1;
     }
-  }
+}
