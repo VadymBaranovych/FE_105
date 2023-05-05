@@ -359,7 +359,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
-.layout:active {
+.layout__active {
   grid-template-columns: 220px 1fr;
 }
 
@@ -373,6 +373,28 @@ body {
 }
 .btn_icon:hover {
   color: #9E8CFC;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #828282;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}
+.title:before {
+  content: "";
+  display: block;
+  font-size: 16px;
+  width: 40px;
+  height: 4px;
+  background: linear-gradient(to right, #9E8CFC 8px, transparent 8px, transparent 12px, #9E8CFC 12px, #9E8CFC 27px, transparent 27px, transparent 32px, #9E8CFC 32px);
+  border-radius: 2px;
 }
 
 .header {
@@ -449,9 +471,12 @@ body {
 
 .sidebar {
   grid-area: sidebar;
-  background: #FFFFFF;
+  display: grid;
+  grid-template-rows: 32px 46px 347px 163px 255px;
+  gap: 30px;
+  background: #fff;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-  padding: 30px 15px 30px;
+  padding: 30px 0;
   z-index: 0;
 }
 .sidebar .btn_logo {
@@ -470,12 +495,12 @@ body {
   width: 32px;
   height: 32px;
 }
-.sidebar .btn_logo .logo span {
+.sidebar .btn_logo .logo .logo_title {
   position: absolute;
   display: block;
   font-size: 18px;
   font-weight: 500;
-  line-height: 1.22;
+  line-height: 22px;
   overflow: hidden;
   width: 0;
   transition: 0.1s ease;
@@ -486,7 +511,7 @@ body {
   font-size: 20px;
   color: #392C72;
   transition: 0.1s ease;
-  right: -25px;
+  right: -10px;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -496,11 +521,16 @@ body {
 .sidebar .btn_logo .sidebar_btn:before {
   display: inline-block;
   transition: 0.2s ease;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.sidebar__active {
+  padding: 30px 15px;
 }
 .sidebar__active .btn_logo .logo {
   justify-content: flex-start;
 }
-.sidebar__active .btn_logo .logo span {
+.sidebar__active .btn_logo .logo .logo_title {
   position: relative;
   width: 104px;
   opacity: 1;
@@ -510,6 +540,44 @@ body {
 }
 .sidebar__active .btn_logo .sidebar_btn:before {
   transform: scale(-1);
+}
+.sidebar .btn_icon-sidebar {
+  padding: 0;
+  background-color: unset;
+  border: unset;
+  font-size: 26px;
+  color: #4F4F4F;
+  transition: 0.1s ease;
+}
+.sidebar .btn_icon-sidebar:hover {
+  color: #fff;
+  background-color: #9E8CFC;
+}
+.sidebar .sidebar_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  gap: 20px;
+}
+.sidebar .sidebar_icon .subtitle {
+  position: absolute;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  overflow: hidden;
+  width: 0;
+  transition: 0.1s ease;
+  opacity: 0;
+}
+.sidebar__active .sidebar_icon {
+  justify-content: flex-start;
+}
+.sidebar__active .sidebar_icon .subtitle {
+  position: relative;
+  width: 89px;
+  opacity: 1;
 }
 
 main {
