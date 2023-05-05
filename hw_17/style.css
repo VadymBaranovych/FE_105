@@ -343,7 +343,7 @@ textarea {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   background-color: #fff;
   font-weight: 400;
 }
@@ -393,8 +393,28 @@ body {
   font-size: 16px;
   width: 40px;
   height: 4px;
-  background: linear-gradient(to right, #9E8CFC 8px, transparent 8px, transparent 12px, #9E8CFC 12px, #9E8CFC 27px, transparent 27px, transparent 32px, #9E8CFC 32px);
+  background: linear-gradient(to right, #9e8cfc 8px, transparent 8px, transparent 12px, #9e8cfc 12px, #9e8cfc 27px, transparent 27px, transparent 32px, #9e8cfc 32px);
   border-radius: 2px;
+  transition: 0.1s ease-in;
+}
+.title span {
+  position: absolute;
+  opacity: 0;
+  transition: 0.1s ease-in;
+}
+
+.sidebar__active {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.sidebar__active .title::before {
+  position: absolute;
+  opacity: 0;
+}
+.sidebar__active .title span {
+  position: static;
+  opacity: 1;
 }
 
 .header {
@@ -459,7 +479,8 @@ body {
   width: 36px;
   height: 36px;
 }
-.header .avatar, .header .avatar img {
+.header .avatar,
+.header .avatar img {
   border-radius: 50%;
 }
 .header .avatar img {
@@ -525,10 +546,15 @@ body {
   border-radius: 50%;
 }
 .sidebar__active {
-  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .sidebar__active .btn_logo .logo {
   justify-content: flex-start;
+  width: 220px;
+  padding-left: 15px;
 }
 .sidebar__active .btn_logo .logo .logo_title {
   position: relative;
@@ -536,7 +562,7 @@ body {
   opacity: 1;
 }
 .sidebar__active .btn_logo .sidebar_btn {
-  right: 0;
+  right: 15px;
 }
 .sidebar__active .btn_logo .sidebar_btn:before {
   transform: scale(-1);
@@ -551,7 +577,6 @@ body {
 }
 .sidebar .btn_icon-sidebar:hover {
   color: #fff;
-  background-color: #9E8CFC;
 }
 .sidebar .sidebar_icon {
   display: flex;
@@ -559,6 +584,10 @@ body {
   justify-content: center;
   height: 46px;
   gap: 20px;
+}
+.sidebar .sidebar_icon:hover {
+  color: #fff;
+  background-color: #9E8CFC;
 }
 .sidebar .sidebar_icon .subtitle {
   position: absolute;
@@ -573,11 +602,14 @@ body {
 }
 .sidebar__active .sidebar_icon {
   justify-content: flex-start;
+  width: 220px;
+  padding: 0 15px;
 }
 .sidebar__active .sidebar_icon .subtitle {
   position: relative;
-  width: 89px;
+  width: 110px;
   opacity: 1;
+  cursor: pointer;
 }
 
 main {
