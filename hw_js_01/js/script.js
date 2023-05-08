@@ -37,6 +37,13 @@ let d = 4;
 
 const FIRST_NAME = 'Vadym';
 
+/*
+*kebab-case — составные части переменной разделяются дефисом. Например: my-super-var.
+*snake_case — для разделения используется подчеркивание. Например: my_super_var.
+*CamelCase — каждое слово в переменной пишется с заглавной буквы. Например: MySuperVar.
+*lowerCamelCase — каждое слово в переменной пишется с заглавной буквы, кроме первого. Например: mySuperVar.
+*/
+
 /*NORM*/
 
 /* 
@@ -46,7 +53,7 @@ let inputFirsName = document.querySelector('#firsName');
 let helloName = document.querySelector('.hello_name');
 let oneForm = document.querySelector('.one_form');
 
-oneForm.onsubmit = function(evt) {
+oneForm.onsubmit = function(e) {
     evt.prevetDefault();
     helloName.textContent = 'Привіт ' + inputFirsName.value;
     inputFirsName.value = '';
@@ -65,7 +72,7 @@ let yearsOld = CURRENT_YEAR;
 inputYear.min = CURRENT_YEAR - 100;
 inputYear.max = CURRENT_YEAR;
 
-twoForm.onsubmit = function(evt) {
+twoForm.onsubmit = function(e) {
     evt.prevetDefault();
     yearsOld -= inputYear.value;
     textYaer.textContent = 'Тобі ' + yearsOld + ' років';
@@ -80,8 +87,8 @@ let textSideSquare = document.querySelector('.text_side_square');
 let perimetr;
 let threeForm = document.querySelector('.three_form');
 
-threeForm.onsubmit = function(evt) {
-    evt.prevetDefault();
+threeForm.onsubmit = function(e) {
+    e.prevetDefault();
     perimetr = inputSideSquare.value * 4;
     textSideSquare.textContent = 'Периметр квадрату дорівнює ' + perimetr + ' см.';
     inputSideSquare.value = '';
@@ -98,8 +105,8 @@ let fourForm = document.querySelector('.four_form');
 let square;
 const PI = Math.PI;
 
-fourForm.onsubmit = function(evt) {
-  evt.preventDefault();
+fourForm.onsubmit = function(e) {
+  e.preventDefault();
   square = Math.PI * inputRadius.value * inputRadius.value;
   textRadius.textContent = 'Площа окружності дорівнює ' + Math.round(square);
   inputRadius.value = '';
@@ -116,8 +123,8 @@ let textKmHour = document.querySelector('.text_km_hour');
 let fiveForm = document.querySelector('.five_form');
 let kmHour;
 
-fiveForm.onsubmit = function(evt) {
-  evt.preventDefault();
+fiveForm.onsubmit = function(e) {
+  e.preventDefault();
   kmHour = inputKm.value / inputHour.value;
   textKmHour.textContent = 'Щоб проїхати '+ inputKm.value + ' км за ' + inputHour.value + ' годин, треба їхати зі швидкістю ' + Math.round(kmHour) + ' км/год';
   inputKm.value = '';
@@ -134,8 +141,8 @@ let textEUR = document.querySelector('.text_EUR');
 let sixForm = document.querySelector('.six_form');
 const USD_TO_EUR = 0.91;
 
-sixForm.onsubmit = function(evt) {
-  evt.preventDefault();
+sixForm.onsubmit = function(e) {
+  e.preventDefault();
   textEUR.textContent = inputUSD.value + '$ = ' + (inputUSD.value * USD_TO_EUR) + '€ (Курс ' + USD_TO_EUR + ')';
   inputUSD.value = '';
 }
