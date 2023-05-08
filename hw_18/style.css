@@ -341,58 +341,14 @@ textarea {
   box-sizing: border-box;
 }
 
-<<<<<<<< HEAD:hw_18/style.css
 @font-face {
   font-family: "icons";
   src: url("./fonts/icons.eot?35jm84");
   src: url("./fonts/icons.eot?35jm84#iefix") format("embedded-opentype"), url("./fonts/icons.ttf?35jm84") format("truetype"), url("./fonts/icons.woff?35jm84") format("woff"), url("./fonts/icons.svg?35jm84#icons") format("svg");
   font-weight: normal;
-========
-body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #e5e5e5;
-  background-color: #fff;
-  font-weight: 400;
-}
-
-.layout {
-  display: grid;
-  grid-template-columns: 86px 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas: "sidebar header" "sidebar main";
-  gap: 68px 0;
-  min-height: 100vh;
-  transition: 0.1s ease;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-.layout__active {
-  grid-template-columns: 220px 1fr;
-}
-
-.btn_icon {
-  padding: 0;
-  background-color: unset;
-  border: unset;
-  font-size: 26px;
-  color: #4F4F4F;
-  transition: 0.1s ease;
-}
-.btn_icon:hover {
-  color: #9E8CFC;
-}
-
-.title {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #828282;
->>>>>>>> 4e5bdf9ee07a3e211df54b7361f23ee927b59715:hw_17/css/style.css
   font-style: normal;
   font-display: block;
 }
-<<<<<<<< HEAD:hw_18/style.css
 [class^=iconfont-]:before, [class*=" iconfont-"]:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icons" !important;
@@ -413,120 +369,6 @@ body {
 
 .iconfont-instagram:before {
   content: "\e901";
-========
-.title:before {
-  content: "";
-  display: block;
-  font-size: 16px;
-  width: 40px;
-  height: 4px;
-  background: linear-gradient(to right, #9e8cfc 8px, transparent 8px, transparent 12px, #9e8cfc 12px, #9e8cfc 27px, transparent 27px, transparent 32px, #9e8cfc 32px);
-  border-radius: 2px;
-  transition: 0.1s ease-in;
-}
-.title span {
-  position: absolute;
-  opacity: 0;
-  transition: 0.1s ease-in;
-}
-
-.sidebar__active {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.sidebar__active .title::before {
-  position: absolute;
-  opacity: 0;
-}
-.sidebar__active .title span {
-  position: static;
-  opacity: 1;
-}
-
-.header {
-  grid-area: header;
-  padding-top: 30px;
-}
-.header_wrapper {
-  height: 80px;
-  background-color: #fff;
-  margin: 0 25px 0;
-  display: flex;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-}
-.header_items {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  align-self: center;
-  gap: 0.5em;
-  width: 100%;
-  padding: 0 20px;
-}
-.header_item {
-  display: flex;
-  align-items: center;
-}
-.header_item-first {
-  gap: 20px;
-}
-.header_item-second {
-  gap: 50px;
-}
-.header_lang {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  color: #4F4F4F;
-  font-size: 18px;
-  font-weight: 400;
-  text-decoration: none;
-  transition: 0.1s ease;
-  padding-right: 10px;
-}
-.header_lang:hover {
-  color: #9E8CFC;
-}
-.header_lang svg {
-  width: 26px;
-  height: 26px;
-}
-.header .btn_settings {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.header .btn_settings .icon-change-theme {
-  padding-right: 4px;
-}
-.header .avatar {
-  width: 36px;
-  height: 36px;
-}
-.header .avatar,
-.header .avatar img {
-  border-radius: 50%;
-}
-.header .avatar img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.sidebar {
-  grid-area: sidebar;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  background: #fff;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-  padding: 30px 0;
-  z-index: 0;
->>>>>>>> 4e5bdf9ee07a3e211df54b7361f23ee927b59715:hw_17/css/style.css
 }
 
 .iconfont-linkedin:before {
@@ -558,84 +400,11 @@ body {
   src: url(../../fonts/redhatdisplay-semibold.eot?#iefix) format("embedded-opentype"), url(../../fonts/redhatdisplay-semibold.svg#redhatdisplay-semibold) format("svg"), url(../../fonts/redhatdisplay-semibold.woff) format("woff"), url(../../fonts/redhatdisplay-semibold.woff2) format("woff2");
   font-weight: 600;
 }
-<<<<<<<< HEAD:hw_18/style.css
 body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #565656;
-========
-.sidebar__active {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.sidebar__active .btn_logo .logo {
-  justify-content: flex-start;
-  width: 220px;
-  padding-left: 15px;
-}
-.sidebar__active .btn_logo .logo .logo_title {
-  position: relative;
-  width: 104px;
-  opacity: 1;
-}
-.sidebar__active .btn_logo .sidebar_btn {
-  right: 15px;
-}
-.sidebar__active .btn_logo .sidebar_btn:before {
-  transform: scale(-1);
-}
-.sidebar .sidebar_icon:hover .btn_icon-sidebar {
-  color: #fff;
-}
-.sidebar .btn_icon-sidebar {
-  padding: 0;
-  background-color: unset;
-  border: unset;
-  font-size: 26px;
-  color: #4F4F4F;
-  transition: 0.1s ease;
-}
-.sidebar .sidebar_icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 46px;
-  gap: 20px;
-}
-.sidebar .sidebar_icon:hover {
-  color: #fff;
-  background-color: #9E8CFC;
-}
-.sidebar .sidebar_icon .subtitle {
-  position: absolute;
-  display: block;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  overflow: hidden;
-  width: 0;
-  transition: 0.1s ease;
-  opacity: 0;
-}
-.sidebar__active .sidebar_icon {
-  justify-content: flex-start;
-  width: 220px;
-  padding: 0 15px;
-}
-.sidebar__active .sidebar_icon .subtitle {
-  position: relative;
-  width: 110px;
-  opacity: 1;
-  cursor: pointer;
-  text-decoration: none;
-  color: #4F4F4F;
-}
-.sidebar__active .sidebar_icon .subtitle:hover {
-  color: #fff;
->>>>>>>> 4e5bdf9ee07a3e211df54b7361f23ee927b59715:hw_17/css/style.css
 }
 
 main {
@@ -645,7 +414,6 @@ main {
 .wrapper {
   max-width: 1200px;
   width: 100%;
-<<<<<<<< HEAD:hw_18/style.css
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -847,8 +615,4 @@ img {
   .footer__wrapper .item__copyright p {
     font-size: 16px;
   }
-========
-  height: auto;
-  z-index: 1;
->>>>>>>> 4e5bdf9ee07a3e211df54b7361f23ee927b59715:hw_17/css/style.css
 }/*# sourceMappingURL=style.css.map */
