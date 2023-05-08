@@ -610,6 +610,11 @@ body {
   width: 110px;
   opacity: 1;
   cursor: pointer;
+  text-decoration: none;
+  color: #4F4F4F;
+}
+.sidebar__active .sidebar_icon .subtitle:hover {
+  color: #fff;
 }
 
 main {

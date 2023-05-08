@@ -261,6 +261,7 @@ body {
 		}
 	}
 	&__active {
+		.sidebar_icon :hover .subtitle {color: #fff;}
 		.sidebar_icon {
 			justify-content: flex-start;
 			width: 220px;
@@ -270,6 +271,8 @@ body {
 				width: 110px;
 				opacity: 1;
 				cursor: pointer;
+				text-decoration: none;
+				color: $colorGrayDark;
 			}
 		}
 	}
