@@ -337,17 +337,10 @@ textarea {
   padding: 0.2em 0;
 }
 
-*, :before, :after {
+* {
   box-sizing: border-box;
 }
 
-<<<<<<<< HEAD:hw_18/style.css
-@font-face {
-  font-family: "icons";
-  src: url("./fonts/icons.eot?35jm84");
-  src: url("./fonts/icons.eot?35jm84#iefix") format("embedded-opentype"), url("./fonts/icons.ttf?35jm84") format("truetype"), url("./fonts/icons.woff?35jm84") format("woff"), url("./fonts/icons.svg?35jm84#icons") format("svg");
-  font-weight: normal;
-========
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #e5e5e5;
@@ -388,32 +381,12 @@ body {
   line-height: 20px;
   text-transform: uppercase;
   color: #828282;
->>>>>>>> 4e5bdf9ee07a3e211df54b7361f23ee927b59715:hw_17/css/style.css
   font-style: normal;
-  font-display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
 }
-<<<<<<<< HEAD:hw_18/style.css
-[class^=iconfont-]:before, [class*=" iconfont-"]:before {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icons" !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.iconfont-facebook:before {
-  content: "\e900";
-}
-
-.iconfont-instagram:before {
-  content: "\e901";
-========
 .title:before {
   content: "";
   display: block;
@@ -526,45 +499,52 @@ body {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   padding: 30px 0;
   z-index: 0;
->>>>>>>> 4e5bdf9ee07a3e211df54b7361f23ee927b59715:hw_17/css/style.css
 }
-
-.iconfont-linkedin:before {
-  content: "\e902";
+.sidebar .btn_logo {
+  position: relative;
 }
-
-.iconfont-logo:before {
-  content: "\e903";
+.sidebar .btn_logo .logo {
+  color: #392C72;
+  text-decoration: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  transition: 0.1s ease;
 }
-
-.iconfont-twitter:before {
-  content: "\e904";
+.sidebar .btn_logo .logo svg {
+  width: 32px;
+  height: 32px;
 }
-
-@font-face {
-  font-family: "Lato";
-  src: url(../../fonts/lato-regular.eot);
-  src: url(../../fonts/lato-regular.eot?#iefix) format("embedded-opentype"), url(../../fonts/lato-regular.svg#lato-regular) format("svg"), url(../../fonts/lato-regular.woff) format("woff"), url(../../fonts/lato-regular.woff2) format("woff2");
+.sidebar .btn_logo .logo .logo_title {
+  position: absolute;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  overflow: hidden;
+  width: 0;
+  transition: 0.1s ease;
+  opacity: 0;
 }
-@font-face {
-  font-family: "Red Hat Display";
-  src: url(../../fonts/redhatdisplay-regular.eot);
-  src: url(../../fonts/redhatdisplay-regular.eot?#iefix) format("embedded-opentype"), url(../../fonts/redhatdisplay-regular.svg#redhatdisplay-regular) format("svg"), url(../../fonts/redhatdisplay-regular.woff) format("woff"), url(../../fonts/redhatdisplay-regular.woff2) format("woff2");
-  font-weight: 400;
+.sidebar .btn_logo .sidebar_btn {
+  position: absolute;
+  font-size: 20px;
+  color: #392C72;
+  transition: 0.1s ease;
+  right: -10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 20px;
+  cursor: pointer;
 }
-@font-face {
-  font-family: "Red Hat Display";
-  src: url(../../fonts/redhatdisplay-semibold.eot);
-  src: url(../../fonts/redhatdisplay-semibold.eot?#iefix) format("embedded-opentype"), url(../../fonts/redhatdisplay-semibold.svg#redhatdisplay-semibold) format("svg"), url(../../fonts/redhatdisplay-semibold.woff) format("woff"), url(../../fonts/redhatdisplay-semibold.woff2) format("woff2");
-  font-weight: 600;
+.sidebar .btn_logo .sidebar_btn:before {
+  display: inline-block;
+  transition: 0.2s ease;
+  background-color: #fff;
+  border-radius: 50%;
 }
-<<<<<<<< HEAD:hw_18/style.css
-body {
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #565656;
-========
 .sidebar__active {
   display: flex;
   flex-direction: column;
@@ -635,220 +615,15 @@ body {
 }
 .sidebar__active .sidebar_icon .subtitle:hover {
   color: #fff;
->>>>>>>> 4e5bdf9ee07a3e211df54b7361f23ee927b59715:hw_17/css/style.css
 }
 
 main {
-  padding-bottom: 90px;
+  grid-area: main;
+  background-color: beige;
+  background-color: #fff;
 }
-
-.wrapper {
-  max-width: 1200px;
+main img {
   width: 100%;
-<<<<<<<< HEAD:hw_18/style.css
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-h1 {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 64px;
-  letter-spacing: 0.05em;
-  color: #000;
-  padding-bottom: 23px;
-}
-
-.title {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 166%;
-  letter-spacing: 0.1em;
-  color: #000;
-  padding-top: 70px;
-  padding-bottom: 50px;
-}
-
-.block_content {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding-bottom: 20px;
-}
-.block_content p {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 19px;
-  line-height: 32px;
-  letter-spacing: 0.05em;
-  color: #565656;
-}
-
-img {
-  display: block;
-  max-width: 1170px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto 20px;
-}
-
-.header {
-  height: 100px;
-  display: flex;
-  align-items: center;
-}
-.header .logo {
-  color: #000;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.footer {
-  background-color: #F4F4F4;
-  color: #000;
-  padding: 70px 0 30px;
-}
-.footer__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr auto;
-  grid-template-areas: "contacts social" "copyright copyright";
-  gap: 26px;
-}
-.footer__wrapper .item__contacts {
-  grid-area: contacts;
-}
-.footer__wrapper .item__social {
-  grid-area: social;
-  align-self: center;
-}
-.footer__wrapper .item__copyright {
-  grid-area: copyright;
-  text-align: center;
-}
-.footer__wrapper .item__copyright p {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 166%;
-  letter-spacing: 0.1em;
-}
-.footer__title {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 64px;
-  letter-spacing: 0.05em;
-  color: #000;
-}
-.footer .list__contacts {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding-top: 30px;
-}
-.footer .list__contacts a {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 166%;
-  letter-spacing: 0.1em;
-  color: #000;
-  text-decoration: unset;
-}
-.footer .list__social {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 23px;
-}
-.footer .list__social a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border: 1px solid #565656;
-  color: #565656;
-  text-decoration: none;
-  transition: 0.1s ease;
-}
-.footer .list__social a:hover {
-  color: #fff;
-  background-color: #565656;
-}
-.footer .list__social a:before {
-  font-size: 24px;
-}
-
-@media screen and (max-width: 1024px) {
-  .header {
-    height: 60px;
-  }
-  h1 {
-    font-size: 33px;
-    line-height: 50px;
-    padding: 24px 0;
-  }
-  .title {
-    padding-top: 50px;
-  }
-  img {
-    max-width: 700px;
-    margin: 50px auto 20px;
-  }
-  .footer__wrapper {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: "contacts" "social" "copyright";
-    text-align: center;
-  }
-  .footer .list__contacts {
-    padding-top: 20px;
-  }
-  .footer .list__social {
-    justify-content: center;
-  }
-}
-@media screen and (max-width: 425px) {
-  main {
-    padding-bottom: 70px;
-  }
-  h1 {
-    font-size: 30px;
-    line-height: 50px;
-    padding: 0 0 20px;
-  }
-  .title {
-    font-size: 26px;
-    padding-bottom: 40px;
-  }
-  .block_content {
-    display: flex;
-    flex-direction: column;
-    gap: 27px;
-  }
-  .block_content p {
-    font-size: 16px;
-    line-height: 32px;
-  }
-  img {
-    max-width: 300px;
-    margin-top: 40px;
-  }
-  .footer__title {
-    font-size: 32px;
-    line-height: 42px;
-  }
-  .footer .list__contacts a {
-    font-size: 18px;
-  }
-  .footer__wrapper .item__copyright p {
-    font-size: 16px;
-  }
-========
   height: auto;
   z-index: 1;
->>>>>>>> 4e5bdf9ee07a3e211df54b7361f23ee927b59715:hw_17/css/style.css
 }/*# sourceMappingURL=style.css.map */
