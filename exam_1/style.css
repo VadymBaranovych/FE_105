@@ -68,8 +68,6 @@ input[type=search]::-webkit-search-results-decoration {
 input[type=search] {
   -webkit-appearance: none;
   -moz-appearance: none;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -261,9 +259,7 @@ input[type=radio] {
  *    (include `-moz` to future-proof).
  */
 input[type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box; /* 2 */
+  -webkit-appearance: textfield; /* 1 */ /* 2 */
   box-sizing: content-box;
 }
 
@@ -358,7 +354,7 @@ body {
 body header .header-wrapper {
   height: 100px;
   display: grid;
-  grid-template-columns: 45px 1fr 210px;
+  grid-template-columns: 45px 915px 210px;
   align-items: center;
 }
 body header .header-wrapper nav.menu ul {
@@ -406,21 +402,18 @@ body header .header-wrapper .btn:hover svg path {
 body header .header-wrapper svg {
   margin-bottom: -3px;
 }
-body main .data_storage {
-  display: flex;
-  align-items: center;
-  position: relative;
-  min-height: 489px;
+body .first_screen {
+  height: 489px;
   margin-top: 100px;
 }
-body main .data_storage .data_storage_content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 50px;
+body section.data_storage_section {
+  display: grid;
+  grid-template-columns: 600px;
+  grid-template-rows: 177px 117px 80px;
+  grid-row-gap: 50px;
 }
-body main .data_storage .data_storage_content .title {
-  width: 601px;
+body section.data_storage_section .title {
+  height: 177px;
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 700;
@@ -430,7 +423,7 @@ body main .data_storage .data_storage_content .title {
   align-items: center;
   color: #212353;
 }
-body main .data_storage .data_storage_content .subtitle {
+body section.data_storage_section .subtitle {
   width: 370px;
   height: 117px;
   font-style: normal;
@@ -439,7 +432,7 @@ body main .data_storage .data_storage_content .subtitle {
   line-height: 160%;
   color: #4b5d68;
 }
-body main .data_storage .data_storage_content .btn {
+body section.data_storage_section .btn {
   width: 210px;
   height: 60px;
   background: #9c69e2;
@@ -447,63 +440,65 @@ body main .data_storage .data_storage_content .btn {
   opacity: 0.9;
   border-radius: 50px;
 }
-body main .data_storage .data_storage_content .btn:hover {
+body section.data_storage_section .btn:hover {
   background-color: #8a40ee;
   border: 1px solid #8a40ee;
 }
-body main .data_storage .data_storage_content .btn span {
+body section.data_storage_section .btn span {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   color: #fff;
 }
-body main .data_storage .img_data_storage {
+body .img_data_storage {
+  position: relative;
+}
+body .img_data_storage img {
   position: absolute;
-  right: 0;
-  max-width: 770px;
-  width: 100%;
-  height: auto;
-  z-index: -1;
+  left: 400px;
   bottom: 0;
 }
-body main .who_we_are {
-  padding: 0 70px;
-  min-height: 560px;
-  background: #FDE8F5;
-  border-radius: 50px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-content: center;
+body .who_we_are {
+  height: 560px;
   margin-top: 100px;
+  position: relative;
 }
-body main .who_we_are .who_we_are_content h2 {
+body .who_we_are .img_who_we_are {
+  position: absolute;
+  top: 75px;
+  left: 70px;
+}
+body .who_we_are_section {
+  height: 340px;
+  position: absolute;
+  top: 110px;
+  left: 600px;
+}
+body .who_we_are_section .title_2 {
+  width: 500px;
+  height: 100px;
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
   line-height: 130%;
+  display: flex;
+  align-items: center;
   color: #212353;
-  margin-bottom: 40px;
 }
-body main .who_we_are .who_we_are_content p {
-  font-family: "Montserrat";
-  font-style: normal;
+body .who_we_are_section .subtitle_2 {
+  width: 500px;
+  height: 200px;
   font-weight: 500;
   font-size: 18px;
   line-height: 160%;
-  color: #4B5D68;
+  color: #4b5d68;
+  margin-top: 40px;
 }
-body main .who_we_are .img_who_we_are {
-  width: 100%;
-  height: 100%;
-  max-width: 400px;
-  max-height: 410px;
+body .features {
+  margin-bottom: 120px;
 }
-body main .features {
-  margin-top: 120px;
-}
-body main .features .title {
+body .features .title_3 {
   text-align: center;
   font-family: "Work Sans";
   font-style: normal;
@@ -511,66 +506,58 @@ body main .features .title {
   font-size: 40px;
   line-height: 130%;
   color: #212353;
+  margin-top: 120px;
 }
-body main .features .subtitle {
-  max-width: 638px;
-  margin: 0 auto;
+body .features .subtitle_3 {
+  width: 638px;
+  height: 58px;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 160%;
   text-align: center;
   color: #4b5d68;
-  padding: 50px 0 80px 0;
+  margin: 50px 0 80px 266px;
 }
-body main .features .items {
+body .features .items {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 400px 400px;
+  grid-template-rows: 400px 400px;
   grid-column-gap: 200px;
   grid-row-gap: 50px;
+  position: relative;
+  left: 170px;
 }
-body main .features .items .item {
+body .features .items .item {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 400px;
-  width: 100%;
-  padding: 62px 100px;
+  padding: 62px 70px 62px 100px;
 }
-body main .features .items .item .img_features {
+body .features .items .item .img_features {
   width: 230px;
   height: 180px;
   position: absolute;
   left: -170px;
-  top: calc(50% - 90px);
+  top: 110px;
 }
-body main .features .items .item_search {
+body .features .items .item_search {
   background-color: #F0FAF9;
   border-radius: 50px;
-  align-self: center;
-  justify-self: end;
 }
-body main .features .items .item_access {
+body .features .items .item_acces {
   background-color: #F6F0FD;
   border-radius: 50px;
-  align-self: center;
-  justify-self: end;
 }
-body main .features .items .item_print {
+body .features .items .item_print {
   background-color: #FEF0F8;
   border-radius: 50px;
-  align-self: center;
-  justify-self: end;
 }
-body main .features .items .item_security {
+body .features .items .item_security {
   background-color: #EAF6FC;
   border-radius: 50px;
-  align-self: center;
-  justify-self: end;
 }
-body main .features .items .name {
+body .features .items .name {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
@@ -579,71 +566,72 @@ body main .features .items .name {
   display: flex;
   align-items: center;
   color: #212353;
+  margin-bottom: 20px;
 }
-body main .features .items p.text {
+body .features .items p.text {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
   color: #4b5d68;
-  max-width: 230px;
-  width: 100%;
-  margin-top: 20px;
-  min-height: 180px;
+  width: 230px;
+  height: 180px;
+  margin-bottom: 20px;
 }
-body main .features .items a {
-  margin-top: 20px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 160%;
-  display: flex;
-  align-items: flex-start;
-  letter-spacing: 0.005em;
-  color: #212353;
-  width: 100%;
-  text-decoration: none;
-}
-body main .testimonials {
+body .features .items .btn_feature {
   position: relative;
-  margin-top: 120px;
-  min-height: 580px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 80px;
+  right: 45px;
+  border: 0;
+  background: 0;
 }
-body main .testimonials img.bg {
+body .testimonials {
+  height: 580px;
+  margin-bottom: 120px;
+}
+body .testimonials .test_background {
+  position: relative;
+}
+body .testimonials .test_background .test_circles_bg .vector_1 {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
 }
-body main .testimonials .title {
+body .testimonials .test_background .test_circles_bg .vector_2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body .testimonials .title_4 {
+  position: absolute;
+  top: 80px;
+  right: 456px;
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
   line-height: 130%;
   color: #4b5d68;
+  z-index: 1;
 }
-body main .testimonials .testimonials_items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
+body .testimonials_wrapper {
+  display: grid;
+  grid-template-columns: 465px 465px;
+  grid-column-gap: 100px;
+  position: relative;
+  padding-left: 70px;
+  bottom: 380px;
 }
-body main .testimonials .testimonials_items .testimonial_wrapper .avatar {
+body .testimonials_wrapper .testimonial_wrapper .avatar {
   width: 90px;
   height: 90px;
   background: #fff;
 }
-body main .testimonials .testimonials_items .testimonial_wrapper .text_wrapper h5 {
+body .testimonials_wrapper .testimonial_wrapper .text_wrapper {
+  position: relative;
+  left: 105px;
+  bottom: 90px;
+}
+body .testimonials_wrapper .testimonial_wrapper .text_wrapper h5 {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -652,7 +640,7 @@ body main .testimonials .testimonials_items .testimonial_wrapper .text_wrapper h
   align-items: center;
   color: #212353;
 }
-body main .testimonials .testimonials_items .testimonial_wrapper .text_wrapper .website {
+body .testimonials_wrapper .testimonial_wrapper .text_wrapper .website {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -664,31 +652,36 @@ body main .testimonials .testimonials_items .testimonial_wrapper .text_wrapper .
   margin: 2px 0 18px 0;
   color: #9c69e2;
 }
-body main .testimonials .testimonials_items .testimonial_wrapper .text_wrapper p {
+body .testimonials_wrapper .testimonial_wrapper .text_wrapper p {
+  width: 300px;
+  height: 131.31px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
   color: #4b5d68;
 }
-body main .testimonials .testimonials_items .names {
-  max-width: 465px;
+body .testimonials_wrapper .names {
+  width: 465px;
+  height: 300px;
   background-color: #fff;
   border: 1px solid #9c69e2;
   border-radius: 50px;
+  z-index: 3;
+  position: relative;
   padding: 50px 30px 50px 30px;
-  display: flex;
-  gap: 15px;
 }
 body footer {
-  min-height: 570px;
-  margin: 120px 0;
+  height: 570px;
+  margin-bottom: 120px;
 }
 body footer .footer_heading {
-  display: flex;
-  justify-content: space-between;
-  min-height: 90px;
-  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: 370px 450px;
+  grid-column-gap: 350px;
+  align-items: center;
+  height: 90px;
+  margin-bottom: 100px;
 }
 body footer .footer_heading .footer_heading_text {
   display: grid;
@@ -768,16 +761,18 @@ body footer .footer_heading .btns_footer_heading svg {
   margin-bottom: -3px;
 }
 body footer .navigation {
-  display: grid;
-  grid-template-columns: minmax(300px, 500px) 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
+}
+body footer .navigation .logo_wrapper {
+  padding-right: 225px;
 }
 body footer .navigation .logo_wrapper .logo {
   margin-bottom: 60px;
 }
 body footer .navigation .logo_wrapper .title_logo {
-  max-width: 180px;
-  width: 100%;
-  min-height: 30px;
+  width: 180px;
+  height: 30px;
   display: inline-block;
   position: relative;
   bottom: 27px;
@@ -849,6 +844,15 @@ body footer .navigation .name_menu {
   font-weight: 600;
   padding-bottom: 30px;
 }
+body footer .navigation .nav_wrapper_1 {
+  padding-right: 169px;
+}
+body footer .navigation .nav_wrapper_2 {
+  padding-right: 169px;
+}
+body footer .navigation .social_wrapper {
+  width: 180px;
+}
 body footer .navigation .icon_items {
   display: flex;
   align-items: center;
@@ -919,195 +923,4 @@ body footer .navigation .icon_items .social_icon_instagram:hover:hover {
   color: #c13584;
   border: 1px solid #c13584;
   opacity: unset;
-}
-
-@media (max-width: 840px) {
-  body main .features .items {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-row-gap: 50px;
-  }
-  body main .features .items .item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: none;
-    width: 100%;
-    padding: 62px 100px;
-  }
-  body main .features .items .item .img_features {
-    width: 230px;
-    height: 180px;
-    position: absolute;
-    left: -170px;
-    top: calc(50% - 90px);
-  }
-  body main .features .items .item_search {
-    background-color: #F0FAF9;
-    border-radius: 50px;
-    align-self: center;
-    justify-self: end;
-  }
-  body main .features .items .item_access {
-    background-color: #F6F0FD;
-    border-radius: 50px;
-    align-self: center;
-    justify-self: end;
-  }
-  body main .features .items .item_print {
-    background-color: #FEF0F8;
-    border-radius: 50px;
-    align-self: center;
-    justify-self: end;
-  }
-  body main .features .items .item_security {
-    background-color: #EAF6FC;
-    border-radius: 50px;
-    align-self: center;
-    justify-self: end;
-  }
-  body main .features .items .name {
-    font-family: "Work Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 130%;
-    display: flex;
-    align-items: center;
-    color: #212353;
-  }
-  body main .features .items p.text {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 160%;
-    color: #4b5d68;
-    max-width: 230px;
-    width: 100%;
-    margin-top: 20px;
-    min-height: 180px;
-  }
-  body main .features .items a {
-    margin-top: 20px;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 160%;
-    display: flex;
-    align-items: flex-start;
-    letter-spacing: 0.005em;
-    color: #212353;
-    width: 100%;
-    text-decoration: none;
-  }
-}
-@media (max-width: 768px) {
-  body header .header-wrapper {
-    height: auto;
-    display: grid;
-    grid-template-columns: 45px 1fr;
-    grid-template-rows: 100px 1fr;
-    grid-template-areas: "logo btn" "menu menu";
-  }
-  body header .header-wrapper .logo {
-    grid-area: logo;
-  }
-  body header .header-wrapper nav.menu {
-    grid-area: menu;
-  }
-  body header .header-wrapper nav.menu ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    margin-left: 0;
-  }
-  body header .header-wrapper .btn {
-    grid-area: btn;
-    font-family: "Montserrat";
-    font-style: normal;
-    height: 60px;
-    background-color: #fff;
-    border-radius: 50px;
-    border: 1px solid #9c69e2;
-    transition: 0.3s ease;
-  }
-  body header .header-wrapper .btn a.btn_text {
-    color: #212353;
-    text-decoration: none;
-    margin-right: 20px;
-    font-weight: 500;
-  }
-  body header .header-wrapper .btn:hover {
-    background-color: #9c69e2;
-    opacity: 0.9;
-  }
-  body header .header-wrapper .btn:hover a.btn_text {
-    color: #fff;
-  }
-  body header .header-wrapper .btn:hover svg path {
-    stroke: #fff;
-  }
-  body main .data_storage {
-    flex-direction: column;
-    gap: 20px;
-  }
-  body main .data_storage .data_storage_content .title {
-    width: 100%;
-    font-size: 40px;
-  }
-  body main .data_storage .data_storage_content .subtitle {
-    width: 100%;
-    height: auto;
-  }
-  body main .data_storage .img_data_storage {
-    position: static;
-    right: unset;
-    height: auto;
-    bottom: unset;
-  }
-  body main .who_we_are {
-    padding: 30px 15px;
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  body main .who_we_are .img_who_we_are {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-  }
-  body main .testimonials .testimonials_items {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
-    flex-direction: column;
-  }
-  body footer .footer_heading {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  body footer .footer_heading .btns_footer_heading {
-    justify-content: center;
-  }
-  body footer .footer_heading .btns_footer_heading .btn_first {
-    max-width: 210px;
-    width: 100%;
-  }
-  body footer .footer_heading .btns_footer_heading .btn_second {
-    max-width: 210px;
-    width: 100%;
-  }
-  body footer .navigation {
-    grid-template-columns: 1fr;
-    row-gap: 30px;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
