@@ -8,14 +8,21 @@ window.addEventListener('scroll', function () {
   }
 });
 //Слайдер для секції main_screen
-const swiper = new Swiper('.main_screen__slider', {
-    direction: 'vertical',
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
+const swiper = new Swiper(".main_screen__slider", {
+  direction: "vertical",
+  spaceBetween: 30,
+  effect: "flip",
+  mousewheel: true,
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 //Слайдер для секції news 
 const swiperNews = new Swiper(".news__slider", {
   slidesPerView: 3,
@@ -32,8 +39,11 @@ const swiperNews = new Swiper(".news__slider", {
 });
 // Плавна прокрутка до якоря
 document.querySelectorAll('a[href^="#"]').forEach(link => {
+
   link.addEventListener('click', function (e) {
+
     e.preventDefault();
+
     let href = this.getAttribute('href').substring(1);
     
     const scrollTarget = document.getElementById(href);
@@ -59,3 +69,6 @@ function activeMenu(){
 }
 activeMenu();
 window.addEventListener("scroll", activeMenu);
+//Fancybox
+Fancybox.bind('[data-fancybox="gallery"]', {
+});
