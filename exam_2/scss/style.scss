@@ -1,3 +1,5 @@
+@import 'reset';
+
 @font-face {
   font-family: "Montserrat";
   font-weight: 400;
@@ -598,6 +600,8 @@
     color: #000;
   }
 }
+.contacts_map {
+position: relative;
 .contacts {
   position: absolute;
   padding: 0 15px;
@@ -606,6 +610,7 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+  bottom: -151px;
   .wrapper {
     background: #fff url("../img/bg_contacts.jpg") no-repeat center bottom;
     background-size: 100% auto;
@@ -680,8 +685,28 @@
       background-color: transparent;
     }
   }
-  .google_map {
-    width: 100%;
-    height: 700px;
+}
+}
+.footer {
+  background: url("../img/back_footer.jpg") no-repeat;
+  background-size: cover;
+  padding: 205px 0px;
+  &__wrapper {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 241px 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 41px 16px;
+  }
+  &__social {
+    justify-self: flex-end;
+  }
+  .copyright {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
   }
 }

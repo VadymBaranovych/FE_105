@@ -10,7 +10,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
 	<link rel="stylesheet" href="./css/iconsfont.css">
-	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -22,7 +21,7 @@
 					<li><a class="links active" href="#aboutUs">About us</a></li>
 					<li><a class="links" href="#projects">Projects</a></li>
 					<li><a class="links" href="#news">News</a></li>
-					<li><a class="links" href="#contact">Contact</a></li>
+					<li><a class="links" href="#contacts">Contact</a></li>
 				</ul>
 			</nav>
 			<nav class="social header__social">
@@ -263,9 +262,9 @@
 				<button>See more</button>
 			</div>
 		</section>
-		<section id="contact" class="contacts_map">
-			<section id="googleMap" class="google_map"></section>
-			<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABGH8aprDnjGzHnD85tKDljrjkpQMwrmk&callback=initMap"></script>
+		<section id="contacts" class="contacts_map">
+			<div id="googleMap" style="width:100%;height:700px;"></div>
+			<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3bzwW_R3EMgupzOSDqdgxNGYcYyAAQpI&callback=initMap"></script>
 			<section class="contacts">
 				<div class="wrapper">
 					<h2 class="title">Get in touch</h2>
@@ -285,22 +284,16 @@
 		</section>
 	</main>
 	<footer class="footer">
-		<div class="wrapper">
-			<a href="#about-us" class="logo"></a>
+		<div class="wrapper footer__wrapper">
+			<a href="#aboutUs" class="logo"></a>
 			<nav class="social footer__social" >
 				<ul>
-					<li>
-						<a href="https://www.facebook.com/" class="icon-facebook"></a>
-					</li>
-					<li>
-						<a href="https://twitter.com/" class="icon-twitter"></a>
-					</li>
-					<li>
-						<a href="https://www.instagram.com/" class="icon-instagram"></a>
-					</li>
+					<li><a href="https://www.facebook.com/" class="icon-facebook"></a></li>
+					<li><a href="https://twitter.com/" class="icon-twitter"></a></li>
+					<li><a href="https://www.instagram.com/" class="icon-instagram"></a></li>
 				</ul>
 			</nav>
-			<p class="copyright"></p>
+			<p class="copyright">Copyrights © 2020 Montichello</p>
 		</div>
 	</footer>
 	<script src="./js/script.js"></script>
