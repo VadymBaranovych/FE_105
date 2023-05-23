@@ -7,6 +7,7 @@ window.addEventListener('scroll', function () {
     element.classList.remove("header__sticky");
   }
 });
+
 //Слайдер для секції main_screen
 const swiper = new Swiper(".main_screen__slider", {
   direction: "vertical",
@@ -23,6 +24,7 @@ const swiper = new Swiper(".main_screen__slider", {
     clickable: true,
   },
 });
+
 //Слайдер для секції news 
 const swiperNews = new Swiper(".news__slider", {
   slidesPerView: 3,
@@ -50,24 +52,20 @@ const swiperNews = new Swiper(".news__slider", {
 });
 // Плавна прокрутка до якоря
 document.querySelectorAll('a[href^="#"]').forEach(link => {
-
   link.addEventListener('click', function (e) {
-
     e.preventDefault();
-
     let href = this.getAttribute('href').substring(1);
-    
     const scrollTarget = document.getElementById(href);
     const topOffset = 70;
     const elementPosition = scrollTarget.getBoundingClientRect().top;
     const offsetPosition = elementPosition - topOffset;
-
     window.scrollBy({
       top: offsetPosition,
       behavior: 'smooth'
     });
   });
 });
+
 //activeMenu 
 let section = document.querySelectorAll('section');
 let navLink = document.querySelectorAll('header nav a');
@@ -82,7 +80,7 @@ window.onscroll = () => {
         links.classList.remove('active');
         document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
       });
-    };
+    }
   });
 };
 //Fancybox
@@ -110,3 +108,4 @@ function initMap() {
 }
 
 window.initMap = initMap;
+
