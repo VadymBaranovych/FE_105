@@ -68,6 +68,8 @@ input[type=search]::-webkit-search-results-decoration {
 input[type=search] {
   -webkit-appearance: none;
   -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -259,7 +261,9 @@ input[type=radio] {
  *    (include `-moz` to future-proof).
  */
 input[type=search] {
-  -webkit-appearance: textfield; /* 1 */ /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
   box-sizing: content-box;
 }
 
@@ -461,8 +465,7 @@ h2.title__white:before {
 .header__wrapper {
   display: grid;
   grid-template-columns: 241px 1fr 160px;
-  -moz-column-gap: 16px;
-       column-gap: 16px;
+  column-gap: 16px;
 }
 .header__menu {
   font-family: "Source Sans Pro", sans-serif;
@@ -525,8 +528,7 @@ h2.title__white:before {
   width: 100%;
   height: 100%;
   z-index: -1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .main_screen__slider .content {
   display: flex;
@@ -621,8 +623,7 @@ h2.title__white:before {
 .projects__img img {
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .projects__img--bottom {
   grid-area: projectsImg;
@@ -691,137 +692,71 @@ h2.title__white:before {
 }
 
 .news {
-  position: relative;
   min-height: 978px;
+  background-image: url("../img/bg_news.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .news__wrapper {
   padding-top: 120px;
 }
-.news .slider_container {
-  position: relative;
-}
-.news .slider_container .news__slider {
-  padding: 90px 0 50px;
-  width: 100%;
-}
-.news .slider_container .news__slider .news__slide {
+.news .news__slider .news__slide {
   background-color: #fff;
 }
-.news .slider_container .news__slider .news__slide--box {
-  padding: 0 20px 30px;
-}
-.news .slider_container .news__slider .news__slide--img {
+.news .news__slider .news__slide img {
   width: 100%;
-  height: 245px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding-bottom: 23px;
+  height: auto;
 }
-.news .slider_container .news__slider .news__slide--title {
-  font-family: "Montserrat", sans-serif;
+.news .news__slider .news__slide h3 {
+  font-family: "Montserrat";
+  font-style: normal;
   font-weight: 700;
   font-size: 22px;
   line-height: 27px;
-  color: #2c4058;
-  text-transform: uppercase;
-  padding-bottom: 15px;
+  color: #2C4058;
+  padding: 15px 20px;
 }
-.news .slider_container .news__slider .news__slide--desc {
-  font-family: "Open Sans", sans-serif;
-  font-size: 17px;
+.news .news__slider .news__slide p {
+  font-family: "Open Sans";
+  font-style: normal;
   font-weight: 400;
+  font-size: 18px;
   line-height: 25px;
-  color: #2c4058;
+  color: #2C4058;
+  padding: 0 20px;
 }
-.news .slider_container .news__slider .news__slide .author {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  padding-top: 39px;
-  display: grid;
-  grid-template-columns: 60px 1fr;
-  grid-template-rows: repeat(2, auto);
+.news .news__slider .news__slide .author {
+  padding: 40px 20px 30px 20px;
+  display: flex;
   align-items: center;
-  gap: 6px 20px;
-  grid-template-areas: "authorImg authorName" "authorImg authorDate";
+  justify-content: flex-start;
+  gap: 20px;
 }
-.news .slider_container .news__slider .news__slide .author picture {
-  grid-area: authorImg;
+.news .news__slider .news__slide .author img {
   width: 60px;
   height: 60px;
-}
-.news .slider_container .news__slider .news__slide .author picture .author__img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   border-radius: 50%;
 }
-.news .slider_container .news__slider .news__slide .author__name {
-  grid-area: authorName;
-  align-self: flex-end;
+.news .news__slider .news__slide .author .content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.news .news__slider .news__slide .author .content h4 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  text-transform: uppercase;
-  color: #2c4058;
+  color: #2C4058;
 }
-.news .slider_container .news__slider .news__slide .author__date {
-  grid-area: authorDate;
-  align-self: flex-start;
+.news .news__slider .news__slide .author .content time {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #55B7FF;
-}
-.news .slider_container .swiper-pagination {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  justify-content: center;
-  bottom: 0;
-}
-.news .slider_container .swiper-pagination .swiper-pagination-bullet {
-  margin: 0;
-  width: 10px;
-  height: 10px;
-  border: 1px solid #fff;
-  opacity: 1;
-  background: transparent;
-  transition: 0.1s ease-in;
-}
-.news .slider_container .swiper-pagination .swiper-pagination-bullet-active {
-  background: #fff;
-}
-.news .slider_container .swiper-button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-.news .slider_container .swiper-button:before {
-  color: #fff;
-  font-size: 9px;
-}
-.news .slider_container .swiper-button-next {
-  right: -100px;
-}
-.news .slider_container .swiper-button-next:before {
-  position: relative;
-  right: -1px;
-}
-.news .slider_container .swiper-button-prev {
-  left: -100px;
-}
-.news .slider_container .swiper-button:after {
-  display: none;
-}
-.news__back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: -1;
 }
 
 .gallery {
@@ -889,8 +824,7 @@ h2.title__white:before {
 .gallery .gallery_items--img .gallery_item img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .gallery .gallery_items--img:hover:before {
   opacity: 1;
@@ -988,9 +922,6 @@ h2.title__white:before {
   padding: 0 0 12px;
   outline: none;
 }
-.contacts_map .contacts__form .input::-moz-placeholder {
-  color: #4B5562;
-}
 .contacts_map .contacts__form .input::placeholder {
   color: #4B5562;
 }
@@ -1030,4 +961,6 @@ h2.title__white:before {
   font-size: 14px;
   line-height: 17px;
   color: #fff;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
