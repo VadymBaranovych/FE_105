@@ -36,6 +36,17 @@ const swiperNews = new Swiper(".news__slider", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    }
+  }
 });
 // Плавна прокрутка до якоря
 document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -69,7 +80,7 @@ window.onscroll = () => {
     if(top > offset && top < offset + height){
       navLink.forEach(links => {
         links.classList.remove('active');
-        document.querySelector('header nav a[href*=" + id + "]').classList.add('active');
+        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
       });
     };
   });
