@@ -7,7 +7,6 @@ window.addEventListener('scroll', function () {
     element.classList.remove("header__sticky");
   }
 });
-
 //Слайдер для секції main_screen
 const swiper = new Swiper(".main_screen__slider", {
   direction: "vertical",
@@ -24,7 +23,6 @@ const swiper = new Swiper(".main_screen__slider", {
     clickable: true,
   },
 });
-
 //Слайдер для секції news 
 const swiperNews = new Swiper(".news__slider", {
   slidesPerView: 3,
@@ -65,7 +63,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
   });
 });
-
 //activeMenu 
 let section = document.querySelectorAll('section');
 let navLink = document.querySelectorAll('header nav a');
@@ -88,14 +85,12 @@ Fancybox.bind('[data-fancybox="gallery"]', {
 });
 // Google Map
 let map;
-
 function initMap() {
   map = new google.maps.Map(document.getElementById("googleMap"), {
     center: { lat: 40.6686, lng: -73.8999 },
     zoom: 13.5,
     mapId: '2f084b4895741534',
   });
-
   const marker = new google.maps.Marker({
     position: { lat: 40.6781, lng: -73.8981 },
     map: map,
@@ -106,12 +101,27 @@ function initMap() {
     },
   });
 }
-
+//Бургер меню
 let headerBurger = $('.header__burger'),
     headerMenu = $('.header__menu');
-
 $(document).ready(function() {
   $('.header__burger').click(function(event) {
     $('.header__burger,.header__menu').toggleClass('active');
+    $('body').toggleClass('lock');
+  });
+});
+//Форма валідації
+$(document).ready(function() {
+  $("#myForm").validate({
+    rules: {
+      name : {
+        required: true,
+        minlength: 3
+      },
+      email: {
+        required: true,
+        email: true
+      },
+    }
   });
 });
