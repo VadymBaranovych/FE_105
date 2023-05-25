@@ -195,6 +195,99 @@
       padding: 8px 0;
       box-shadow: 0 -2px 16px linear-gradient(251.06deg, #7e5aff -2.19%, #55b7ff 103.21%);
     }
+    .header__burger {
+      display: none;
+    }
+    @media screen and (max-width: 1023px) {
+      .header {
+        &__wrapper {
+          grid-template-columns: 241px 1fr 30px;
+          column-gap: 30px;
+          height: 40px;
+        }
+        &__social {
+          justify-self: flex-end;
+        }
+        &__menu {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #a09dad;
+          z-index: -1;
+          opacity: 0;
+          &--active {
+            right: 0;
+            opacity: 1;
+          }
+          ul {
+            flex-direction: column;
+            gap: 15px;
+          }
+          li {
+            font-size: 24px;
+          }
+          &:before {
+            display: none;
+          }
+        }
+      }
+      .logo   {
+        width: 200px;
+        height: 40px;
+      }
+      .header__burger  {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        align-self: center;
+        cursor: pointer;
+        span {
+          position: absolute;
+          background-color: #fff;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          top: 9px;
+        }
+        &:before,
+        &:after {
+          content: '';
+          background-color: #fff;
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          left: 0;
+        }
+          &:before {
+            top: 0;
+          }
+          &:after {
+            bottom: 0;
+          }
+      }
+      &__sticky {
+        z-index: 3;
+      }
+    }
+    @media screen and (max-width: 767px){
+      .header {
+        &__wrapper {
+          grid-template-columns: 1fr 30px;
+          column-gap: 12px;
+          height: 30px;
+        }
+        &__social {
+          display: none;
+        }
+      }
+      .logo   {
+        width: 160px;
+        height: 30px;
+      }
+    }
   }
 .main_screen {
     position: relative;
@@ -378,9 +471,12 @@
     min-height: 978px;
     background-image: url("../img/bg_news.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     &__wrapper {
       padding-top: 120px;
+    }
+    .swiper_container {
+      position: relative;
     }
    .news__slider {
     padding: 90px 0 50px;
@@ -463,6 +559,7 @@
         }
       }
     }
+  }
     .swiper-button {
       width: 40px;
       height: 40px;
@@ -487,7 +584,6 @@
       }
     }
   }
-}
 .gallery {
   padding: 150px 0;
   .gallery_items {
