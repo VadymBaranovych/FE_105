@@ -15,7 +15,7 @@ const swiper = new Swiper(".main_screen__slider", {
   mousewheel: true,
   loop: true,
   autoplay: {
-    delay: 4000,
+    delay: 7000,
     disableOnInteraction: false,
   },
   pagination: {
