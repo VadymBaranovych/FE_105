@@ -62,7 +62,7 @@ const swiper = new Swiper(".main_screen__slider", {
     clickable: true,
   },
 });
-//Slider for the section секції news 
+//Slider for the section news 
 const swiperNews = new Swiper(".news__slider", {
   slidesPerView: 3,
   spaceBetween: 30,
