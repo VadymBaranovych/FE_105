@@ -51,6 +51,7 @@ const swiper = new Swiper(".main_screen__slider", {
   direction: "vertical",
   spaceBetween: 30,
   effect: "flip",
+  grabCursor: true,
   loop: true,
   autoplay: {
     delay: 5000,
