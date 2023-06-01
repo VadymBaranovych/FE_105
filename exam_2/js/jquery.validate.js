@@ -1,11 +1,3 @@
-/*!
- * jQuery Validation Plugin v1.19.5
- *
- * https://jqueryvalidation.org/
- *
- * Copyright (c) 2022 Jörn Zaefferer
- * Released under the MIT license
- */
 (function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
 		define( ["jquery"], factory );
@@ -18,10 +10,8 @@
 
 $.extend( $.fn, {
 
-	// https://jqueryvalidation.org/validate/
 	validate: function( options ) {
 
-		// If nothing is selected, return nothing; can't chain anyway
 		if ( !this.length ) {
 			if ( options && options.debug && window.console ) {
 				console.warn( "Nothing selected, can't validate, returning nothing." );
@@ -29,13 +19,11 @@ $.extend( $.fn, {
 			return;
 		}
 
-		// Check if a validator for this form was already created
 		var validator = $.data( this[ 0 ], "validator" );
 		if ( validator ) {
 			return validator;
 		}
 
-		// Add novalidate tag if HTML5.
 		this.attr( "novalidate", "novalidate" );
 
 		validator = new $.validator( options, this[ 0 ] );
@@ -45,37 +33,26 @@ $.extend( $.fn, {
 
 			this.on( "click.validate", ":submit", function( event ) {
 
-				// Track the used submit button to properly handle scripted
-				// submits later.
 				validator.submitButton = event.currentTarget;
 
-				// Allow suppressing validation by adding a cancel class to the submit button
 				if ( $( this ).hasClass( "cancel" ) ) {
 					validator.cancelSubmit = true;
 				}
 
-				// Allow suppressing validation by adding the html5 formnovalidate attribute to the submit button
 				if ( $( this ).attr( "formnovalidate" ) !== undefined ) {
 					validator.cancelSubmit = true;
 				}
 			} );
 
-			// Validate the form on submit
 			this.on( "submit.validate", function( event ) {
 				if ( validator.settings.debug ) {
 
-					// Prevent form submit to be able to see console output
 					event.preventDefault();
 				}
 
 				function handle() {
 					var hidden, result;
 
-					// Insert a hidden input as a replacement for the missing submit button
-					// The hidden input is inserted in two cases:
-					//   - A user defined a `submitHandler`
-					//   - There was a pending request due to `remote` method and `stopRequest()`
-					//     was called to submit the form in case it's valid
 					if ( validator.submitButton && ( validator.settings.submitHandler || validator.formSubmitted ) ) {
 						hidden = $( "<input type='hidden'/>" )
 							.attr( "name", validator.submitButton.name )
@@ -87,7 +64,6 @@ $.extend( $.fn, {
 						result = validator.settings.submitHandler.call( validator, validator.currentForm, event );
 						if ( hidden ) {
 
-							// And clean up afterwards; thanks to no-block-scope, hidden can be referenced
 							hidden.remove();
 						}
 						if ( result !== undefined ) {
@@ -98,7 +74,6 @@ $.extend( $.fn, {
 					return true;
 				}
 
-				// Prevent submit for invalid forms or custom submit handlers
 				if ( validator.cancelSubmit ) {
 					validator.cancelSubmit = false;
 					return handle();
@@ -119,7 +94,6 @@ $.extend( $.fn, {
 		return validator;
 	},
 
-	// https://jqueryvalidation.org/valid/
 	valid: function() {
 		var valid, validator, errorList;
 
@@ -140,13 +114,11 @@ $.extend( $.fn, {
 		return valid;
 	},
 
-	// https://jqueryvalidation.org/rules/
 	rules: function( command, argument ) {
 		var element = this[ 0 ],
 			isContentEditable = typeof this.attr( "contenteditable" ) !== "undefined" && this.attr( "contenteditable" ) !== "false",
 			settings, staticRules, existingRules, data, param, filtered;
 
-		// If nothing is selected, return empty object; can't chain anyway
 		if ( element == null ) {
 			return;
 		}
@@ -168,7 +140,6 @@ $.extend( $.fn, {
 			case "add":
 				$.extend( existingRules, $.validator.normalizeRule( argument ) );
 
-				// Remove messages from rules, but allow them to be set separately
 				delete existingRules.messages;
 				staticRules[ element.name ] = existingRules;
 				if ( argument.messages ) {
@@ -198,7 +169,6 @@ $.extend( $.fn, {
 			$.validator.staticRules( element )
 		), element );
 
-		// Make sure required is at front
 		if ( data.required ) {
 			param = data.required;
 			delete data.required;
@@ -216,22 +186,17 @@ $.extend( $.fn, {
 	}
 } );
 
-// JQuery trim is deprecated, provide a trim method based on String.prototype.trim
 var trim = function( str ) {
 
-	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim#Polyfill
 	return str.replace( /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "" );
 };
 
-// Custom selectors
 $.extend( $.expr.pseudos || $.expr[ ":" ], {		// '|| $.expr[ ":" ]' here enables backwards compatibility to jQuery 1.7. Can be removed when dropping jQ 1.7.x support
 
-	// https://jqueryvalidation.org/blank-selector/
 	blank: function( a ) {
 		return !trim( "" + $( a ).val() );
 	},
 
-	// https://jqueryvalidation.org/filled-selector/
 	filled: function( a ) {
 		var val = $( a ).val();
 		return val !== null && !!trim( "" + val );
