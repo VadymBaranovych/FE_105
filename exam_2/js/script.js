@@ -1,4 +1,4 @@
-//Хедер скролл sticky
+//Header scroll sticky
 let element = document.querySelector('.header');
 window.addEventListener('scroll', function () {
   if (window.scrollY > 53) {
@@ -7,15 +7,53 @@ window.addEventListener('scroll', function () {
     element.classList.remove("header__sticky");
   }
 });
-//Слайдер для секції main_screen
+//Active menu 
+let section = document.querySelectorAll('section');
+let navLink = document.querySelectorAll('header nav a');
+window.onscroll = () => {
+  section.forEach(sec => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop-150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute('id');
+    if(top > offset && top < offset + height){
+      navLink.forEach(links => {
+        links.classList.remove('active');
+        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+      });
+    }
+  });
+};
+//Burger menu
+$(document).ready(function() {
+  $('.header__burger').click(function(event) {
+    $('.header__burger,.header__menu').toggleClass('active');
+    $('body').toggleClass('lock');
+  });
+});
+// Smooth scrolling to the anchor
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    let href = this.getAttribute('href').substring(1);
+    const scrollTarget = document.getElementById(href);
+    const topOffset = 70;
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - topOffset;
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  });
+});
+//Slider for the section main_screen
 const swiper = new Swiper(".main_screen__slider", {
   direction: "vertical",
   spaceBetween: 30,
   effect: "flip",
-  mousewheel: true,
   loop: true,
   autoplay: {
-    delay: 7000,
+    delay: 5000,
     disableOnInteraction: false,
   },
   pagination: {
@@ -23,7 +61,7 @@ const swiper = new Swiper(".main_screen__slider", {
     clickable: true,
   },
 });
-//Слайдер для секції news 
+//Slider for the section секції news 
 const swiperNews = new Swiper(".news__slider", {
   slidesPerView: 3,
   spaceBetween: 30,
@@ -48,38 +86,6 @@ const swiperNews = new Swiper(".news__slider", {
     }
   }
 });
-// Плавна прокрутка до якоря
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    let href = this.getAttribute('href').substring(1);
-    const scrollTarget = document.getElementById(href);
-    const topOffset = 70;
-    const elementPosition = scrollTarget.getBoundingClientRect().top;
-    const offsetPosition = elementPosition - topOffset;
-    window.scrollBy({
-      top: offsetPosition,
-      behavior: 'smooth'
-    });
-  });
-});
-//activeMenu 
-let section = document.querySelectorAll('section');
-let navLink = document.querySelectorAll('header nav a');
-window.onscroll = () => {
-  section.forEach(sec => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop-150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute('id');
-    if(top > offset && top < offset + height){
-      navLink.forEach(links => {
-        links.classList.remove('active');
-        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-      });
-    }
-  });
-};
 //Fancybox
 Fancybox.bind('[data-fancybox="gallery"]', {
 });
@@ -101,18 +107,9 @@ function initMap() {
     },
   });
 }
-//Бургер меню
-let headerBurger = $('.header__burger'),
-    headerMenu = $('.header__menu');
+//Form of validation
 $(document).ready(function() {
-  $('.header__burger').click(function(event) {
-    $('.header__burger,.header__menu').toggleClass('active');
-    $('body').toggleClass('lock');
-  });
-});
-//Форма валідації
-$(document).ready(function() {
-  $("#myForm").validate({
+  $("#form").validate({
     rules: {
       name : {
         required: true,
