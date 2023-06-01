@@ -758,28 +758,28 @@ h2.title__white:before {
   grid-area: projectsText;
   padding-top: 30px;
 }
-.projects__title, .projects__subtitle {
+.projects h2, .projects h3 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 }
-.projects__title {
+.projects h3 {
   font-weight: 400;
   font-size: 22px;
   line-height: 27px;
 }
-.projects__subtitle {
+.projects h2 {
   font-weight: 700;
   font-size: 44px;
   line-height: 54px;
 }
-.projects__text {
+.projects p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   padding: 19px 0 40px;
 }
-.projects__more {
+.projects button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -795,7 +795,7 @@ h2.title__white:before {
   text-transform: uppercase;
   color: #000;
 }
-.projects__address {
+.projects a {
   display: flex;
   gap: 10px;
   margin-top: 60px;
@@ -806,7 +806,7 @@ h2.title__white:before {
   color: #000;
   text-decoration: none;
 }
-.projects__address::before {
+.projects a::before {
   display: flex;
   align-items: center;
   color: #2c4058;
