@@ -1,5 +1,4 @@
 //Header scroll sticky
-
 let element = document.querySelector('.header');
 window.addEventListener('scroll', function () {
   if (window.scrollY > 53) {
@@ -8,9 +7,7 @@ window.addEventListener('scroll', function () {
     element.classList.remove("header__sticky");
   }
 });
-
 //Active menu 
-
 let section = document.querySelectorAll('section');
 let navLink = document.querySelectorAll('header nav a');
 window.onscroll = () => {
@@ -27,18 +24,14 @@ window.onscroll = () => {
     }
   });
 };
-
 //Burger menu
-
 document.querySelector(document).ready(function() {
   document.querySelector('.header__burger').addEventListener('click',function(event) {
     document.querySelector('.header__burger,.header__menu').classList.toggle('active');
     document.querySelector('body').classList.toggle('lock');
   });
 });
-
 // Smooth scrolling to the anchor
-
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
@@ -53,9 +46,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
   });
 });
-
 //Slider for the section main_screen
-
 const swiper = new Swiper(".main_screen__slider", {
   direction: "vertical",
   spaceBetween: 30,
@@ -71,9 +62,7 @@ const swiper = new Swiper(".main_screen__slider", {
     clickable: true,
   },
 });
-
 //Slider for the section news 
-
 const swiperNews = new Swiper(".news__slider", {
   slidesPerView: 3,
   spaceBetween: 30,
@@ -98,14 +87,10 @@ const swiperNews = new Swiper(".news__slider", {
     }
   }
 });
-
 //Fancybox
-
 Fancybox.bind('[data-fancybox="gallery"]', {
 });
-
 // Google Map
-
 let map;
 function initMap() {
   map = new google.maps.Map(document.getElementById("googleMap"), {
@@ -123,9 +108,7 @@ function initMap() {
     },
   });
 }
-
 //Form of validation
-
 $(document).ready(function() {
   $("#form").validate({
     rules: {
