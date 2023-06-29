@@ -1,0 +1,15 @@
+@mixin flex($aligin-item, $justify-content) {
+    display: flex;
+    align-items: $aligin-item;
+    justify-content: $justify-content;
+}
+
+@mixin overlay {
+    background-color: rgba($color: #000, $alpha: 0.6);
+}
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $layoutWidth: 1660 - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$layoutWidth}));
+}
