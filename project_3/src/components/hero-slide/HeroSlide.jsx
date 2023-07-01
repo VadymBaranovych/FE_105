@@ -1,4 +1,4 @@
- import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import SwiperCore, { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,7 +10,8 @@ import tmdbApi, { category, movieType } from '../../api/tmdbApi';
 import apiConfig from '../../api/apiConfig';
 
 import './hero-slide.scss';
-import { useHistory } from 'react-router';
+import 'swiper/swiper.min.css';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSlide = () => {
 
@@ -60,7 +61,7 @@ const HeroSlide = () => {
 
 const HeroSlideItem = props => {
 
-    let hisrory = useHistory();
+    let hisrory = useNavigate();
 
     const item = props.item;
 

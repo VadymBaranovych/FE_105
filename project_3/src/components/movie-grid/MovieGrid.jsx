@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useHistory, useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import './movie-grid.scss';
 
@@ -89,7 +89,7 @@ const MovieGrid = props => {
 
 const MovieSearch = props => {
 
-    const history = useHistory();
+    const history = useNavigate();
 
     const [keyword, setKeyword] = useState(props.keyword ? props.keyword : '');
 

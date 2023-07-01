@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 
 import tmdbApi from '../../api/tmdbApi';
 import apiConfig from '../../api/apiConfig';
@@ -27,6 +27,7 @@ const Detail = () => {
 
     return (
         <>
+            xbcnhbm
             {
                 item && (
                     <>
