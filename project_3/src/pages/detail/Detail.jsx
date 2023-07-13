@@ -25,9 +25,10 @@ const Detail = () => {
         getDetail();
     }, [category, id]);
 
+    item && item.title ? document.title = item.title : document.title = 'TV Series';
+
     return (
         <>
-            xbcnhbm
             {
                 item && (
                     <>

@@ -69,23 +69,34 @@
         }
 
         .title {
-            font-size: 64px;
+            @include adaptiv-font(64, 40);
             line-height: 1;
         }
 
         .genres {
-            & > * ~ * {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            row-gap: 8px;
+            & > * {
                 margin-left: 8px;
+                padding: 3px 8px;
+                display: grid;
+                align-items: center;
+                justify-content: center;
             }
 
             &__item {
-                padding: 8px 24px;
+                @include adaptiv-font(13, 9);
+                padding: 5px 10px;
                 border: 2px solid $white;
                 border-radius: $border-radius;
-                font-size: 13px;
                 font-weight: 600;
-                background-color: $body-bg;
+                background-color: $body-bg;   
             }
+        }
+        .overview {
+            @include adaptiv-font(18, 12);
+            font-weight: 600;
         }
     }
 }
@@ -103,7 +114,8 @@
         }
 
         &__name {
-            font-size: 13px;
+            @include adaptiv-font(15, 12);
+            font-weight: 600;
         }
     }
 }

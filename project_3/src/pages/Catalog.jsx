@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import { useParams } from 'react-router-dom';
 
@@ -8,6 +8,11 @@ import MovieGrid from '../components/movie-grid/MovieGrid';
 import { category as cate } from '../api/tmdbApi';
 
 const Catalog = () => {
+
+    useEffect(() => {
+        document.title = 'Cinestar | Catalog';
+      },[]);
+
     const { category } = useParams();
 
     return (

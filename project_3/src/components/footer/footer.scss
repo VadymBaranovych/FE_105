@@ -46,7 +46,7 @@
 
             font-weight: 600;
             line-height: 1;
-            text-shadow: 2px 2px 1px $black, 0 0 10px $main-color, 0 0 5px $main-color;
+            text-shadow: 2px 1px 1px $black, 0 0 3px $main-color, 0 0 5px $main-color;
 
             & > * ~ * {
                 margin-top: 16px;
