@@ -25,7 +25,13 @@ const Detail = () => {
         getDetail();
     }, [category, id]);
 
-    item && item.title ? document.title = item.title : document.title = 'TV Series';
+    if (item && item.title) {
+        document.title = item.title;
+    } else if (item && item.name) {
+        document.title = item.name;
+    } else {
+        document.title = 'Movies'
+    }
 
     return (
         <>

@@ -19,14 +19,15 @@
     }
 
     &__content {
-        padding-top: 37.5%;
+        position: relative;
+        padding-top: 27.5%;
         background-color: $body-bg;
         width: 50%;
         height: 0;
         opacity: 0;
         transform: translateY(-250px);
         transition: transform .6s ease, opacity .6s ease;
-        position: relative;
+        border-radius: 20px;
         
         iframe {
             position: absolute;
@@ -36,16 +37,22 @@
             bottom: 0;
             right: 0;
             left: 0;
+            padding: 30px;
+            border-radius: 20px;
         }
 
         @include tablet {
             width: 80%;
-            padding-top: 60%;
+            padding-top: 45%;
         }
 
         @include mobile {
             width: 80%;
-            padding-top: 60%;
+            padding-top: 45%;
+
+            iframe {
+                padding: 0;
+            }
         }
 
         &__close {

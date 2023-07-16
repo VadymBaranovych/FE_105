@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
 import { useParams } from 'react-router-dom';
 
@@ -9,11 +9,17 @@ import { category as cate } from '../api/tmdbApi';
 
 const Catalog = () => {
 
-    useEffect(() => {
-        document.title = 'Cinestar | Catalog';
-      },[]);
-
     const { category } = useParams();
+
+    let pageURL = window.location.pathname;
+
+    if (pageURL === '/catalog/movie') {
+      document.title = 'Cinestar | Movies';
+    } else if (pageURL === '/catalog/tv') {
+      document.title = 'Cinestar | TV Series';
+    } else {
+      document.title = 'Cinestar | Catalog';
+    }
 
     return (
         <>
