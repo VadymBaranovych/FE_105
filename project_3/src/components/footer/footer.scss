@@ -1,0 +1,115 @@
+@use '../../scss' as*;
+
+.footer {
+    position: relative;
+    padding: 96px 32px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-image: linear-gradient(to bottom, $body-bg, rgba($black, 0));
+    }
+
+    &__content {
+        max-width: 1355px;
+
+        &__logo {
+            @include flex(center, center);
+            margin-bottom: 48px;
+        }
+
+        &__menus {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            font-family: $font-family-2;
+
+            @include mobile {
+                grid-template-columns: repeat(2, 1fr);
+                align-items: center;
+                line-height: 2;
+            }
+        }
+
+        &__menu {
+            @include flex(flex-start, flex-start);
+            @include adaptiv-font(20, 16);
+            flex-direction: column;
+            margin-top: 16px;
+
+            font-weight: 600;
+            line-height: 1;
+            text-shadow: 2px 1px 1px $black, 0 0 3px $main-color, 0 0 5px $main-color;
+
+            & > * ~ * {
+                margin-top: 16px;
+            }
+        }
+
+        &__social {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            a:hover {
+                color: unset;
+                cursor: auto;
+            }
+
+            .instagram {
+                &:hover {
+                    cursor: pointer;
+                    transform: translateY(-3px);
+                    color: $instagram-color;
+                    transition: all .3s;
+                }
+            }
+            .facebook {
+                &:hover {
+                    cursor: pointer;
+                    transform: translateY(-3px);
+                    color: $facebook-color;
+                    transition: all .3s;
+                }
+            }
+            .twitter {
+                &:hover {
+                    cursor: pointer;
+                    transform: translateY(-3px);
+                    color: $twitter-color;
+                    transition: all .3s;
+                }
+            }
+            .google {
+                &:hover {
+                    cursor: pointer;
+                    transform: translateY(-3px);
+                    color: $google-color;
+                    transition: all .3s;
+                }
+            }
+            .youtube {
+                &:hover {
+                    cursor: pointer;
+                    transform: translateY(-3px);
+                    color: $youtube-color;
+                    transition: all .3s;
+                }
+            }
+            .pinterest {
+                &:hover {
+                    cursor: pointer;
+                    transform: translateY(-3px);
+                    color: $pinterest-color;
+                    transition: all .3s;
+                }
+            }
+        }
+    }
+}
