@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Цикли й умови</title>
+</head>
+<body>
+	<main>
+		<section class="min wrapper">
+			<h2>Мінімум</h2>
+			<ol>
+				<li>
+					<p>Вкажіть, будь ласка, ваш вік</p>
+					<form action="" class="form_1" method="POST">
+						<input type="number" name="age" id="age" min="0" max="100" required>
+						<button type="submit">Отримати відповідь</button>
+					</form>
+					<p class="answer_1"></p>
+				</li>
+				<li>
+					<p>Вкажіть, будь-ласка число від 0 до 9.</p>
+					<form action="" class="form_2" method="POST">
+						<input type="number" name="symbol" id="symbol" min="0" max="9" required>
+						<button type="submit">Отримати відповідь</button>
+					</form>
+					<p class="answer_2"></p>
+				</li>
+				<li>
+					<p>Напишить, будь ласка, діапазон чисел від 0 до 100.</p>
+					<form action="" class="form_3" method="POST">
+						<input type="number" name="min_num" id="minNum" min="0" max="100" required>
+						<input type="number" name="max_num" id="maxNum" min="0" max="100" required>
+						<button type="submit">Отримати відповідь</button>
+					</form>
+					<p class="answer_3"></p>
+				</li>
+				<li>
+					<p>Напишить, будь ласка, два числа.</p>
+					<form action="" class="form_4" method="POST">
+						<input type="number" name="min_num" id="minNum1" required>
+						<input type="number" name="max_num" id="maxNum1" required>
+						<button type="submit">Отримати відповідь</button>
+					</form>
+					<p class="answer_4"></p>
+				</li>
+				<li>
+					<p>Напишить, будь ласка, число.</p>
+					<form action="" class="form_5" method="POST">
+						<input type="number" name="min_num" id="numberDivider" required>
+						<button type="submit">Отримати відповідь</button>
+					</form>
+					<p class="answer_5"></p>
+				</li>
+			</ol>
+		</section>
+		<section class="norm">
+			<h2>Норма</h2>
+			<ol>
+				<li>
+					<p class="strong">Введіть будь-яке натуральне число</p>
+					<form action="" method="POST" class="form_6">
+						<input type="text" name="num_palindrome" id="numPalindrome">
+						<button type="submit">Отримати відповідь</button>
+					</form>
+					<p class="answer_6"></p>
+				</li>
+				<li>
+					<p class="strong">Введіть суму покупки</p>
+					<form action="" method="POST" class="form_7">
+						<input type="text" name="sum_purchase" id="sumPurchase">
+						<button type="submit">Отримати відповідь</button>
+					</form>
+					<p class="answer_7"></p>
+				</li>
+				<li>
+					<p class="strong">Напишить, 10 чисел через кому без пробілів.</p>
+					<form action="" method="POST" class="form_8">
+						<input type="text" name="list_num" id="num">
+						<button type="submit">Отримати відповідь</button>
+					</form>
+					<p class="answer_8"></p>
+				</li>
+				<li><span class="day_week"></span> День тижня. Хочеш побачити наступний день? <button
+						id="dayWeek">Ок</button></li>
+			</ol>
+		</section>
+	</main>
+	<script src="./js/script.js"></script>
+</body>
+</html>
