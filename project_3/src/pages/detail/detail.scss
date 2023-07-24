@@ -1,0 +1,129 @@
+@use '../../scss/' as *;
+
+.banner {
+    height: 50vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include overlay();
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-image: linear-gradient(to top, $body-bg, rgba($black, 0));
+    }
+}
+
+.movie-content {
+    @include flex(flex-start, flex-start);
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -200px;
+    position: relative;
+    padding: 0 32px;
+
+    &__poster {
+        flex: 1;
+
+        @include mobile {
+            display: none;
+        }
+
+        &__img {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: $border-radius;
+            padding-top: 165%;
+            box-shadow: $box-shadow;
+        }
+    }
+
+    &__info {
+        width: 70%;
+        padding-left: 32px;
+        position: relative;
+
+        @include mobile {
+            width: 100%;
+            padding-left: 0;
+        }
+
+        & > * {
+            margin-bottom: 32px;
+        }
+
+        .title {
+            @include adaptiv-font(64, 34);
+            line-height: 1;
+        }
+
+        .genres {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            row-gap: 8px;
+            & > * {
+                margin-left: 8px;
+                padding: 3px 8px;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &__item {
+                @include adaptiv-font(13, 9);
+                padding: 5px 10px;
+                border: 2px solid $white;
+                border-radius: $border-radius;
+                font-weight: 600;
+                background-color: $body-bg;   
+            }
+        }
+        .overview {
+            @include adaptiv-font(18, 12);
+            font-weight: 600;
+        }
+    }
+}
+
+.casts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+    gap: 10px;
+
+    &__item {
+        &__img {
+            padding-top: 160px;
+            background-size: cover;
+            margin-bottom: 8px;
+        }
+
+        &__name {
+            @include adaptiv-font(15, 12);
+            font-weight: 600;
+        }
+    }
+}
+
+.video {
+    margin-bottom: 48px;
+
+    &__title {
+        margin-bottom: 24px;
+    }
+}
